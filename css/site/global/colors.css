@@ -1,0 +1,38 @@
+/* TONS DE CINZA */
+
+:root {
+	--c00: #ffffff;
+	--c05: #f3f5f4;
+	--c10: #eaeaec;
+	--c20: #e5e5e7;
+	--c30: #c9cacf;
+	--c40: #afb0b7;
+	--c50: #94969e;
+	--c60: #797b86;
+	--c70: #61636b;
+	--c80: #494a50;
+	--c90: #303035;
+	--c95: #18181a;
+	--c100: #000000;
+	--swiper-theme-color: #ffffff !important;
+}
+
+/* PALETA DE CORES */
+
+:root {
+	--b1: #eff3f3;
+	--b2: #dadee2;
+	--b3: #e1e4e6;
+
+	--p1: #8bffcd;
+	--p2: #2eb8a1;
+	--p3: #339685;
+	--p4: #005959;
+	--p5: #004d46;
+	--p6: #0a0524;
+
+	--s1: #0094c1;
+	--s2: #c64d80;
+	--s3: #e6aa46;
+	--s4: #af0012;
+}

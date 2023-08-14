@@ -1,0 +1,20 @@
+/* -------------------- SITE -------------------- */
+
+/* GLOBAL */
+@import url('/css/site/global/global.css');
+@import url('/css/site/global/colors.css');
+@import url('/css/site/global/buttons.css');
+@import url('/css/site/global/header.css');
+@import url('/css/site/global/footer.css');
+
+/* PAGES */
+@import url('/css/site/pages/home.css');
+@import url('/css/site/pages/search.css');
+@import url('/css/site/pages/about.css');
+@import url('/css/site/pages/partners.css');
+
+@import url('/css/site/pages/simulation.css');
+@import url('/css/site/pages/scheduling.css');
+
+/* PRODUCTS */
+@import url('/css/site/products/product-layout.css');

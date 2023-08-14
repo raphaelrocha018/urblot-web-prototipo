@@ -1,0 +1,17 @@
+/* -------------------- CUSTOMERS PROFILE -------------------- */
+
+/* LOGIN */
+@import url('customers/login/login.css');
+@import url('customers/login/register.css');
+
+/* PAGES */
+@import url('customers/sidebar.css');
+@import url('customers/dashboard.css');
+@import url('customers/purchase.css');
+@import url('customers/profile.css');
+@import url('customers/financial.css');
+
+/* TIMELINE */
+@import url('customers/timeline/timeline.css');
+@import url('customers/timeline/tabs.css');
+@import url('customers/timeline/calendar.css');
