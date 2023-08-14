@@ -51,7 +51,7 @@
 	display: inline-block;
 	width: 1.5rem;
 	height: 1.5rem;
-	background: url(./assets/site/home/btn-icons/intro.svg);
+	background: url('/assets/site/home/btn-icons/intro.svg');
 }
 
 /* RESPONSIVO INICIO */
@@ -307,11 +307,11 @@
 }
 
 .measurement.medida::before {
-	background-image: url(./assets/site/home/btn-icons/ruler.svg);
+	background-image: url('/assets/site/home/btn-icons/ruler.svg');
 }
 
 .measurement.valor::before {
-	background-image: url(./assets/site/home/btn-icons/money.svg);
+	background-image: url('/assets/site/home/btn-icons/money.svg');
 }
 
 .property-available-units {
@@ -570,7 +570,7 @@
 }
 
 .parceiros-box {
-	background: url(./assets/site/home/parceiros-home.jpg) center center no-repeat fixed;
+	background: url('/assets/site/home/parceiros-home.jpg') center center no-repeat fixed;
 	background-size: cover;
 	border-radius: 1rem;
 
@@ -631,7 +631,7 @@
 	display: inline-block;
 	width: 1.5rem;
 	height: 1.5rem;
-	background: url(./assets/site/home/btn-icons/hands.svg);
+	background: url('/assets/site/home/btn-icons/hands.svg');
 }
 
 /* RESPONSIVO PARCEIROS */
