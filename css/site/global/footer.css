@@ -2,7 +2,7 @@
 
 .footer {
 	min-height: 60vh;
-	background: var(--b1) url('./assets/site/footer/bg-footer.svg') no-repeat;
+	background: var(--b1) url('/assets/site/footer/bg-footer.svg') no-repeat;
 	background-size: 100%;
 	background-position: bottom;
 	padding-block: 2rem 3rem;
@@ -46,7 +46,7 @@
 	display: inline-block;
 	width: 1.5rem;
 	height: 1.5rem;
-	background: url('./assets/site/home/btn-icons/whatsapp.svg');
+	background: url('/assets/site/home/btn-icons/whatsapp.svg');
 }
 
 .email::before {
@@ -54,7 +54,7 @@
 	display: inline-block;
 	width: 1.5rem;
 	height: 1.5rem;
-	background: url('./assets/site/home/btn-icons/email.svg');
+	background: url('/assets/site/home/btn-icons/email.svg');
 }
 
 .copyright {
