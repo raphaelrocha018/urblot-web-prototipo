@@ -2,7 +2,7 @@
 
 .inicio {
 	position: relative;
-	min-height: calc(100vh - 11rem);
+	min-height: calc(100dvh - 11rem);
 }
 
 .inicio-banner {
@@ -58,7 +58,7 @@
 
 @media (max-width: 1440px) {
 	.inicio {
-		min-height: calc(100vh - 9rem);
+		min-height: calc(100dvh - 9rem);
 	}
 
 	.inicio-banner img {
@@ -85,12 +85,12 @@
 
 @media (max-width: 1080px) {
 	.inicio {
-		min-height: calc(100vh - 13rem);
+		min-height: calc(100dvh - 13rem);
 	}
 
 	.inicio-banner {
 		display: block;
-		height: 60vh;
+		height: 60dvh;
 	}
 
 	.inicio-banner img {
@@ -119,13 +119,13 @@
 
 @media (max-width: 720px) {
 	.inicio {
-		min-height: calc(100vh - 7rem);
+		min-height: calc(100dvh - 7rem);
 	}
 
 	.inicio-banner {
 		position: relative;
-		top: 13vh;
-		height: 62vh;
+		top: 13dvh;
+		height: 62dvh;
 	}
 
 	.inicio-banner img {
@@ -193,22 +193,6 @@
 .card-group:last-child {
 	padding-right: 1.5rem;
 }
-
-/* .card-group::before {
-    content: "";
-    display: inline-block;
-    width: 8rem;
-    height: 100%;
-    background: linear-gradient(
-        90deg,
-        rgba(239, 243, 243, 1) 0%,
-        rgba(239, 243, 243, 0) 100%
-    );
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 5;
-} */
 
 .card {
 	min-width: 24rem;
@@ -328,10 +312,6 @@
 	transition: 0.4s ease;
 }
 
-/* .card:hover .pill {
-    background-color: var(--p2);
-} */
-
 .soon {
 	font-size: 0.875rem;
 	font-weight: 600;
@@ -356,7 +336,6 @@
 .card:has(.soon):hover > img,
 .card:has(.soon):hover > div {
 	opacity: 50%;
-	/* mix-blend-mode: luminosity; */
 }
 
 .card:has(.soon):hover > .soon {
@@ -478,7 +457,7 @@
 
 .sobre {
 	background-color: var(--p5);
-	height: 100vh;
+	height: 100dvh;
 	display: grid;
 	align-items: center;
 }
@@ -564,7 +543,7 @@
 
 .parceiros {
 	/* padding: 0 5rem; */
-	height: 100vh;
+	height: 100dvh;
 	display: grid;
 	align-items: center;
 }
@@ -672,7 +651,7 @@
 @media (max-width: 1080px) {
 	.parceiros {
 		padding: 2rem;
-		height: 100vh;
+		height: 100dvh;
 	}
 
 	.parceiros-box {
