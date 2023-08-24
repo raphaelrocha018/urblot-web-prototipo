@@ -90,10 +90,6 @@
         padding: 1.5px 6px 2.5px;
     }
 
-    .login-header h1 {
-        font-size: 1.125rem;
-    }
-
     .login-header p {
         margin-bottom: 1rem;
     }
@@ -327,7 +323,6 @@
         justify-content: center;
         max-width: 100%;
         width: 100%;
-        font-size: 1rem;
     }
 }
 

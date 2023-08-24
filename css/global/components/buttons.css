@@ -1,6 +1,6 @@
 /* BOTÕES */
 
-/* BOTÃO PRINCIPAL */
+/* #region --- BOTÃO PRINCIPAL */
 
 .btn1 {
 	display: flex;
@@ -21,9 +21,12 @@
 .btn1:hover {
 	color: var(--c00);
 	background: var(--p2);
+	scale: 102%;
 }
 
-/* BOTÃO VAZADO */
+/* #endregion */
+
+/* #region --- BOTÃO VAZADO */
 
 .btn2 {
 	display: flex;
@@ -45,81 +48,40 @@
 	color: var(--c00);
 	background-color: var(--p2);
 	border: 2px solid var(--p2);
+	scale: 104%;
 }
 
-/* BOTÃO 3 */
+/* #endregion */
+
+/* #region --- BOTÃO CONFIRMAÇÃO */
 
 .btn3 {
 	display: flex;
 	align-items: center;
-	gap: 0.75rem;
+	justify-content: center;
+	gap: 0.875rem;
 
-	font-size: 0.875rem;
+	font-size: 1rem;
 	font-weight: 500;
-	color: var(--p4);
+	color: var(--c00);
 
-	background: var(--p1);
+	background: var(--p2);
 	border-radius: 0.5rem;
-	padding: 0.75rem 1.25rem;
+	padding: 0.75rem 1.5rem;
+
 	cursor: pointer;
 	transition: 0.3s ease;
 }
 
 .btn3:hover {
-	background: var(--c00);
-}
-
-/* BOTÃO 4 */
-
-.btn4 {
-	display: flex;
-	align-items: center;
-	gap: 1rem;
-	max-width: max-content;
-
-	font-size: 1rem;
-	font-weight: 500;
-	color: var(--p1);
-
-	background-color: var(--p5);
-	border: 2px solid var(--p1);
-	border-radius: 0.5rem;
-	padding: 0.75rem 2rem;
-	cursor: pointer;
-}
-
-.btn4:hover {
-	color: var(--p4);
-	background: var(--c00);
-	border: 2px solid transparent;
-	transition: 0.3s ease;
-}
-
-/* BOTÃO 5 */
-
-.btn5 {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 1rem;
-
-	font-size: 1rem;
-	font-weight: 600;
-	color: var(--c00);
-
-	background-color: var(--p2);
-	border-radius: 0.5rem;
-	padding: 0.75rem 2rem;
-
-	transition: 0.3s ease;
-	cursor: pointer;
-}
-
-.btn5:hover {
 	filter: brightness(110%);
+	scale: 101%;
+	box-shadow: var(--shadow1);
 }
 
-/* BTN CLOSE */
+/* #endregion */
+
+/* #region --- BTN CLOSE */
 
 .btn-close {
 	position: absolute;
@@ -149,52 +111,32 @@
 	fill: var(--c00);
 }
 
-/* RESPONSIIVO */
+/* #endregion */
+
+/* #region --- RESPONSIIVO */
 
 @media (max-width: 1440px) {
-	.btn2 {
-		font-size: 0.875rem;
-		padding: 0.75rem 2rem;
-	}
-
 	.btn3 {
 		font-size: 0.875rem;
-		padding: 0.75rem 2rem;
 	}
 }
 
 @media (max-width: 1080px) {
-	.btn1 {
-		padding: 0.75rem 1.25rem;
-		font-size: 0.75rem;
-	}
 
+	.btn1,
 	.btn2 {
 		padding: 0.75rem 1.25rem;
 		font-size: 0.75rem;
-	}
-
-	.btn3 {
-		font-size: 0.875rem;
-		padding: 0.75rem 1.5rem;
 	}
 }
 
 @media (max-width: 720px) {
-	.btn1 {
-		padding: 0.75rem 1.125rem;
-		font-size: 1rem;
-	}
 
+	.btn1,
 	.btn2 {
 		padding: 0.75rem 1.125rem;
-		font-size: 1rem;
-	}
-
-	.btn3 {
-		gap: 0.5rem;
-		padding: 0.75rem 1.5rem;
-		font-size: 1rem;
-		font-weight: 600;
+		font-size: 0.875rem;
 	}
 }
+
+/* #region */
