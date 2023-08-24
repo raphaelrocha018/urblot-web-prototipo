@@ -1,4 +1,4 @@
-/* CABEÇALHO */
+/* #region --- HEADER */
 
 .header-navbar {
 	padding-block: 4rem;
@@ -29,7 +29,9 @@
 	gap: 1rem;
 }
 
-/* RESPONSIVO */
+/* #endregion */
+
+/* #region --- RESPONSIVO HEADER */
 
 @media (max-width: 1440px) {
 	.header-navbar {
@@ -104,3 +106,5 @@
 		justify-content: end;
 	}
 }
+
+/* #endregion */

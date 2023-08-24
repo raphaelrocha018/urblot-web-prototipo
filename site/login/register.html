@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>URBLOT - Crie sua conta</title>
+
+    <link rel="stylesheet" href="/style.css" type="text/css">
+</head>
+<body class="site">
+    <main class="login-page" id="modal-register">
+        <div class="login-wrapper">
+            <a href="/index.html" class="btn-close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <circle cx="12" cy="12" r="11" fill="rgba(0, 0, 0, 0)" stroke="var(--c50)" stroke-width="2" />
+                    <path d="M15.7072 9.70701L13.4142 12L15.7072 14.293C16.0982 14.684 16.0982 15.316 15.7072 15.707C15.5122 15.902 15.2562 16 15.0002 16C14.7442 16 14.4883 15.902 14.2933 15.707L12.0002 13.414L9.70725 15.707C9.51225 15.902 9.25625 16 9.00025 16C8.74425 16 8.48825 15.902 8.29325 15.707C7.90225 15.316 7.90225 14.684 8.29325 14.293L10.5863 12L8.29325 9.70701C7.90225 9.31601 7.90225 8.68401 8.29325 8.29301C8.68425 7.90201 9.31625 7.90201 9.70725 8.29301L12.0002 10.586L14.2933 8.29301C14.6843 7.90201 15.3162 7.90201 15.7072 8.29301C16.0982 8.68401 16.0982 9.31601 15.7072 9.70701Z" fill="var(--c50)" />
+                </svg>
+            </a>
+
+            <header class="login-header">
+                <picture class="logo">
+                    <source srcset="/assets/site/header/logo-h-24.svg" media="(max-width: 720px)">
+                    <img src="/assets/site/header/logo-h-32.svg" alt="Logotipo URBLOT">
+                </picture>
+                <h1>Crie sua conta</h1>
+            </header>
+
+            <form class="login-form">
+                <div class="input-group">
+                    <div class="input-wrapper">
+                        <label for="Name">Nome</label>
+                        <input name="Name" type="text" id="name" required />
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="LastName">Sobrenome</label>
+                        <input name="LastName" type="text" id="LastName" required />
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="input-wrapper">
+                        <label for="PhoneNumber">Telefone</label>
+                        <input name="PhoneNumber" type="tel" inputmode="numeric" id="PhoneNumber" required />
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="BirthDate">Data de Nascimento</label>
+                        <input name="BirthDate" type="text" inputmode="numeric" id="BirthDate" required />
+                    </div>
+                </div>
+                <div class="input-wrapper">
+                    <label for="Email">Email</label>
+                    <input name="Email" type="email" id="Email" required />
+                </div>
+                <div class="input-wrapper">
+                    <label for="Password">Senha</label>
+                    <input name="Password" type="password" id="Password" required />
+                </div>
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" name="terms" id="terms" />
+                    <label for="terms">
+                        <span>
+                            Ao criar a conta, você está de acordo com os <a>Termos de Serviço</a> e <a>Políticas de Privacidade</a>.
+                        </span>
+                    </label>
+                </div>
+
+                <button class="btn5">Criar conta</button>
+            </form>
+
+            <div class="login-api">
+                <span>ou</span>
+                <button class="api-google">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <g>
+                            <path d="M3.50938 9.66899L2.95819 11.7481L0.943577 11.7912C0.341505 10.6628 0 9.37186 0 7.99999C0 6.67339 0.319299 5.42239 0.885278 4.32086H0.885711L2.67928 4.65311L3.46497 6.45449C3.30053 6.93889 3.2109 7.45889 3.2109 7.99999C3.21096 8.58724 3.31624 9.14989 3.50938 9.66899Z" fill="#FBBB00" />
+                            <path d="M15.6969 6.50549C15.7878 6.98943 15.8353 7.48921 15.8353 7.99999C15.8353 8.57274 15.7757 9.13143 15.6621 9.67034C15.2767 11.5042 14.2696 13.1055 12.8745 14.2387L12.874 14.2382L10.615 14.1218L10.2952 12.1051C11.221 11.5565 11.9444 10.698 12.3255 9.67034H8.0918V6.50549H12.3873H15.6969Z" fill="#518EF8" />
+                            <path d="M12.8736 14.2383L12.874 14.2387C11.5172 15.3407 9.79358 16 7.91731 16C4.90212 16 2.28065 14.2972 0.943359 11.7912L3.50916 9.66904C4.17779 11.4721 5.8992 12.7556 7.91731 12.7556C8.78474 12.7556 9.5974 12.5187 10.2947 12.1051L12.8736 14.2383Z" fill="#28B446" />
+                            <path d="M12.9707 1.84175L10.4058 3.9635C9.68411 3.50769 8.83099 3.24437 7.91701 3.24437C5.85323 3.24437 4.09962 4.58678 3.46449 6.4545L0.885199 4.32088H0.884766C2.20248 1.75384 4.85701 0 7.91701 0C9.8381 0 11.5995 0.691437 12.9707 1.84175Z" fill="#F14336" />
+                        </g>
+                    </svg>
+                    <span>Entrar com Google</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="login-footer">
+            <span>Já tem uma conta?</span>
+            <a href="./login.html">Entre por aqui</a>
+        </div>
+    </main>
+</body>
+</html>

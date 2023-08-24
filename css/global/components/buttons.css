@@ -95,6 +95,60 @@
 	transition: 0.3s ease;
 }
 
+/* BOTÃO 5 */
+
+.btn5 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+
+	font-size: 1rem;
+	font-weight: 600;
+	color: var(--c00);
+
+	background-color: var(--p2);
+	border-radius: 0.5rem;
+	padding: 0.75rem 2rem;
+
+	transition: 0.3s ease;
+	cursor: pointer;
+}
+
+.btn5:hover {
+	filter: brightness(110%);
+}
+
+/* BTN CLOSE */
+
+.btn-close {
+	position: absolute;
+	top: 1.5rem;
+	right: 1.5rem;
+	transition: .3s ease;
+	cursor: pointer;
+}
+
+.btn-close:focus {
+	outline: none;
+}
+
+.btn-close > svg circle,
+.btn-close > svg path {
+	transition: .3s ease;
+}
+
+.btn-close:hover > svg circle,
+.btn-close:focus > svg circle {
+	stroke: var(--s4);
+	fill: var(--s4);
+}
+
+.btn-close:hover > svg path,
+.btn-close:focus > svg path {
+	fill: var(--c00);
+}
+
 /* RESPONSIIVO */
 
 @media (max-width: 1440px) {
@@ -136,8 +190,11 @@
 		padding: 0.75rem 1.125rem;
 		font-size: 1rem;
 	}
+
 	.btn3 {
+		gap: 0.5rem;
 		padding: 0.75rem 1.5rem;
 		font-size: 1rem;
+		font-weight: 600;
 	}
 }

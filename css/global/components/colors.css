@@ -20,7 +20,7 @@
 /* PALETA DE CORES */
 
 :root {
-	--b1: #eff3f3;
+	--b1: #eef4f4;
 	--b2: #dadee2;
 	--b3: #e1e4e6;
 
@@ -35,4 +35,11 @@
 	--s2: #c64d80;
 	--s3: #e6aa46;
 	--s4: #af0012;
+}
+
+/* BOX-SHADOW */
+
+:root {
+	--shadow1: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+	--shadow2: 5px 5px 10px 0px rgba(0, 0, 0, 0.1);
 }

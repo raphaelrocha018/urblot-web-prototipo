@@ -1,4 +1,4 @@
-/* RODAPÉ */
+/* #region FOOTER */
 
 .footer {
 	min-height: 60vh;
@@ -46,7 +46,7 @@
 	display: inline-block;
 	width: 1.5rem;
 	height: 1.5rem;
-	background: url('/assets/site/home/btn-icons/whatsapp.svg');
+	background: url('/assets/site/btn-icons/whatsapp.svg');
 }
 
 .email::before {
@@ -54,7 +54,7 @@
 	display: inline-block;
 	width: 1.5rem;
 	height: 1.5rem;
-	background: url('/assets/site/home/btn-icons/email.svg');
+	background: url('/assets/site/btn-icons/email.svg');
 }
 
 .copyright {
@@ -67,7 +67,9 @@
 	margin-left: 0.25rem;
 }
 
-/* RESPONSIVO FOOTER */
+/* #endregion */
+
+/* #region RESPONSIVO FOOTER */
 
 @media (max-width: 1080px) {
 	.footer {
@@ -96,3 +98,5 @@
 		display: block;
 	}
 }
+
+/* #endregion */

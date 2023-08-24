@@ -1,11 +1,13 @@
-/* INÍCIO */
+/* #region --- INÍCIO */
 
 .inicio {
 	position: relative;
-	min-height: calc(100dvh - 11rem);
+	min-height: calc(100vh - 11rem);
 }
 
 .inicio-banner {
+	display: inline-block;
+	position: relative;
 	z-index: -1;
 }
 
@@ -14,19 +16,24 @@
 	width: 100%;
 }
 
-.inicio-pin {
+.inicio-banner::before {
+	content: '';
+	display: inline-block;
+	width: 5rem;
+	height: 5rem;
+	background: url('/assets/site/home/intro/pin-home.svg') no-repeat;
 	position: absolute;
-	top: 28rem;
-	bottom: auto;
-	right: 1.5rem;
+	bottom: 5rem;
+	right: -2.5rem;
+	z-index: 1;
 }
 
 .inicio-texto {
 	background-color: var(--p5);
 	position: absolute;
-	left: 1rem;
 	max-width: max-content;
 	top: 5rem;
+	left: 2rem;
 	border-radius: 2rem 2rem 0;
 	padding: 2.5rem 3rem;
 }
@@ -51,25 +58,24 @@
 	display: inline-block;
 	width: 1.5rem;
 	height: 1.5rem;
-	background: url('/assets/site/home/btn-icons/intro.svg');
+	background: url('/assets/site/btn-icons/intro.svg');
 }
 
-/* RESPONSIVO INICIO */
+/* #endregion */
+
+/* #region --- RESPONSIVO INICIO */
 
 @media (max-width: 1440px) {
 	.inicio {
-		min-height: calc(100dvh - 9rem);
+		min-height: calc(100vh - 9rem);
 	}
 
 	.inicio-banner img {
 		border-radius: 1.5rem;
 	}
 
-	.inicio-pin {
-		width: 9%;
-		top: 22rem;
-		bottom: auto;
-		right: -1rem;
+	.inicio-banner::before {
+		bottom: 4rem;
 	}
 
 	.inicio-texto {
@@ -85,24 +91,22 @@
 
 @media (max-width: 1080px) {
 	.inicio {
-		min-height: calc(100dvh - 13rem);
+		min-height: calc(100vh - 13rem);
 	}
 
 	.inicio-banner {
 		display: block;
-		height: 60dvh;
+		height: 60vh;
 	}
 
 	.inicio-banner img {
 		object-fit: cover;
+		object-position: center top;
 		height: 100%;
 	}
 
-	.inicio-pin {
-		width: 10%;
-		top: auto;
-		bottom: 10rem;
-		right: 0;
+	.inicio-banner::before {
+		bottom: 3rem;
 	}
 
 	.inicio-texto {
@@ -119,18 +123,20 @@
 
 @media (max-width: 720px) {
 	.inicio {
-		min-height: calc(100dvh - 7rem);
+		min-height: calc(100vh - 7rem);
+		padding-bottom: 2rem;
 	}
 
 	.inicio-banner {
-		position: relative;
-		top: 13dvh;
-		height: 62dvh;
+		padding-top: 7rem;
+		width: 100%;
+		height: 70vh;
 	}
 
-	.inicio-banner img {
-		object-fit: cover;
-		height: 100%;
+	.inicio-banner::before {
+		bottom: 0;
+		right: 50%;
+		transform: translateX(50%) translateY(50%);
 	}
 
 	.inicio-texto {
@@ -141,27 +147,21 @@
 	.inicio h1 {
 		font-size: 1.5rem;
 	}
-
-	.inicio-pin {
-		width: 20%;
-		top: auto;
-		bottom: 4rem;
-		left: 50%;
-		transform: translateX(-50%);
-	}
 }
 
-/* EMPREENDIMENTOS */
+/* #endregion */
+
+/* #region --- EMPREENDIMENTOS */
 
 .empreendimentos {
 	padding: 8rem 0rem 8rem 5rem;
 	display: grid;
 	grid-template-columns: 1fr 2fr;
-	gap: 1rem;
+	gap: 1rem 2rem;
 }
 
 .empreendimentos h2 {
-	font-size: 3.5rem;
+	font-size: 3rem;
 	line-height: 1;
 	color: var(--p5);
 
@@ -186,7 +186,7 @@
 	overflow-x: auto;
 	padding-bottom: 1.5rem;
 	padding-left: 0.5rem;
-	margin-right: calc(-50vw + 90.8%);
+	margin-right: calc(-50vw + 84.4%);
 	position: relative;
 }
 
@@ -291,11 +291,11 @@
 }
 
 .measurement.medida::before {
-	background-image: url('/assets/site/home/btn-icons/ruler.svg');
+	background-image: url('/assets/site/btn-icons/ruler.svg');
 }
 
 .measurement.valor::before {
-	background-image: url('/assets/site/home/btn-icons/money.svg');
+	background-image: url('/assets/site/btn-icons/money.svg');
 }
 
 .property-available-units {
@@ -343,7 +343,9 @@
 	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* RESPONSIVO EMPREENDIMENTOS */
+/* #endregion */
+
+/* #region --- RESPONSIVO EMPREENDIMENTOS */
 
 @media (max-width: 1440px) {
 	.empreendimentos {
@@ -362,7 +364,7 @@
 
 	.card-group {
 		gap: 1.25rem;
-		margin-right: calc(-50vw + 79.4%);
+		margin-right: calc(-50vw + 80.6%);
 	}
 
 	.card {
@@ -453,11 +455,13 @@
 	}
 }
 
-/* SOBRE */
+/* #endregion */
+
+/* #region --- SOBRE */
 
 .sobre {
 	background-color: var(--p5);
-	height: 100dvh;
+	height: 100vh;
 	display: grid;
 	align-items: center;
 }
@@ -465,31 +469,38 @@
 .sobre-conteudo {
 	display: flex;
 	flex-direction: row;
+	gap: 4rem;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: center;
 }
 
 .sobre-conteudo h2 {
-	font-size: 3.5rem;
+	font-size: 3rem;
 	line-height: 1;
 	color: var(--c00);
 
 	max-width: 16ch;
-	margin-bottom: 1rem;
+	margin-bottom: 1.25rem;
 }
 
 .sobre-conteudo p {
-	font-size: 1rem;
+	font-size: 1.125rem;
 	font-weight: 400;
 	line-height: 1.5;
-	color: #e1e1e1;
+	color: var(--c00);
 
-	max-width: 48ch;
+	max-width: 41ch;
 }
 
-/* RESPONSIVO SOBRE */
+/* #endregion */
+
+/* #region --- RESPONSIVO SOBRE */
 
 @media (max-width: 1440px) {
+	.sobre-conteudo {
+		gap: 1rem;
+	}
+
 	.sobre-conteudo h2 {
 		font-size: 2.5rem;
 		max-width: 16ch;
@@ -539,17 +550,18 @@
 	}
 }
 
-/* PARCEIROS */
+/* #endregion */
+
+/* #region --- PARCEIROS */
 
 .parceiros {
-	/* padding: 0 5rem; */
-	height: 100dvh;
+	height: 100vh;
 	display: grid;
 	align-items: center;
 }
 
 .parceiros-box {
-	background: url('/assets/site/home/parceiros-home.jpg') center center no-repeat fixed;
+	background: url("/assets/site/home/partners/partners-home-1x.jpg") center center no-repeat fixed;
 	background-size: cover;
 	border-radius: 1rem;
 
@@ -610,10 +622,12 @@
 	display: inline-block;
 	width: 1.5rem;
 	height: 1.5rem;
-	background: url('/assets/site/home/btn-icons/hands.svg');
+	background: url('/assets/site/btn-icons/hands.svg');
 }
 
-/* RESPONSIVO PARCEIROS */
+/* #endregion */
+
+/* #region --- RESPONSIVO PARCEIROS */
 
 @media (max-width: 1440px) {
 	.parceiros {
@@ -651,10 +665,13 @@
 @media (max-width: 1080px) {
 	.parceiros {
 		padding: 2rem;
-		height: 100dvh;
+		height: 100vh;
 	}
 
 	.parceiros-box {
+		background: url("/assets/site/home/partners/partners-home-1x.jpg") top center;
+		background-size: cover;
+
 		max-width: 45rem;
 		height: 100%;
 
@@ -697,7 +714,9 @@
 	}
 }
 
-/* BARRA DE ROLAGEM empreendimentos */
+/* #endregion */
+
+/* #region --- BARRA DE ROLAGEM empreendimentos */
 
 ::-webkit-scrollbar {
 	opacity: 100%;
@@ -738,3 +757,5 @@
 	border-radius: 1rem;
 	background-color: var(--c40);
 }
+
+/* #endregion */

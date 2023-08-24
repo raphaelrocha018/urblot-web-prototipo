@@ -1,4 +1,4 @@
-/* PÁGINA PARCEIROS */
+/* #region --- PÁGINA PARCEIROS */
 
 .partners-grid {
 	display: grid;
@@ -90,10 +90,6 @@
 	color: var(--p4);
 }
 
-input {
-	text-transform: uppercase;
-}
-
 .entrada {
 	background-color: var(--c00) !important;
 	border-radius: 0.5rem !important;
@@ -119,8 +115,10 @@ input {
 	appearance: none;
 	padding: 0 !important;
 	display: inline-block;
-	width: 15px; /* Ajuste o tamanho da bolinha aqui */
-	height: 15px; /* Ajuste o tamanho da bolinha aqui */
+	width: 15px;
+	/* Ajuste o tamanho da bolinha aqui */
+	height: 15px;
+	/* Ajuste o tamanho da bolinha aqui */
 	border-radius: 50%;
 	border: 2px solid #999;
 	margin-right: 5px;
@@ -134,7 +132,8 @@ input {
 }
 
 .radio-group input[type='radio']:checked.default {
-	background-color: #ff0000; /* Cor de fundo para o botão de rádio padrão */
+	background-color: #ff0000;
+	/* Cor de fundo para o botão de rádio padrão */
 }
 
 .radio-group span {
@@ -190,3 +189,5 @@ input {
 		width: 100%;
 	}
 }
+
+/* #endregion */
