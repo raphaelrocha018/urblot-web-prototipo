@@ -140,11 +140,11 @@
 }
 
 .detalhes-medida::before {
-	background-image: url(/assets/site/home/btn-icons/ruler.svg);
+	background-image: url('/assets/site/btn-icons/ruler.svg');
 }
 
 .detalhes-valor::before {
-	background-image: url(/assets/site/home/btn-icons/money.svg);
+	background-image: url('/assets/site/btn-icons/money.svg');
 }
 
 .intro-conteudo button::before {
@@ -152,7 +152,7 @@
 	display: inline-block;
 	width: 24px;
 	height: 24px;
-	background-image: url(/assets/site/home/btn-icons/calc.svg);
+	background-image: url('/assets/site/btn-icons/calc.svg');
 	transition: 0.4s ease;
 }
 
@@ -744,7 +744,7 @@
     display: inline-block;
     width: 12px;
     height: 6px;
-    background: url(../../img/site/icones/seta.png) no-repeat;
+    background: url('../../img/site/icones/seta.png) no-repeat;
 }
 
 .quadra-escolha:hover::after {
@@ -894,7 +894,7 @@
 		display: inline-block;
 		width: 1.5rem;
 		height: 1.5rem;
-		background: url(/assets/site/home/btn-icons/calc.svg);
+		background: url('/assets/site/btn-icons/calc.svg');
 	}
 
 	/* .quadra {

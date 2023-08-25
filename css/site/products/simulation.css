@@ -494,3 +494,8 @@ div:has(select)::before {
 .hidden {
     display: none;
 }
+
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
