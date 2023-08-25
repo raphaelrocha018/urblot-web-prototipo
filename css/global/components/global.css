@@ -31,6 +31,10 @@ em {
 	color: var(--p1);
 }
 
+select {
+	appearance: none;
+}
+
 details > summary {
 	list-style-type: none;
 }

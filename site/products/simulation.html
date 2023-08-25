@@ -5,18 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>URBLOT - Faça uma simulação</title>
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/style.css" />
 </head>
-<body>
+<body class="site">
+    <!-- CABEÇALHO -->
+    <header id="header" class="container">
+        <nav class="header-navbar">
+            <a class="logo" href="/index.html">
+                <picture class="logo">
+                    <source srcset="/assets/site/header/logo-h-20.svg" media="(max-width: 720px)">
+                    <source srcset="/assets/site/header/logo-h-24.svg" media="(max-width: 1440px)">
+                    <img src="/assets/site/header/logo-h-32.svg" alt="Logotipo URBLOT">
+                </picture>
+            </a>
+            <menu class="header-menu">
+                <li><a href="/index.html">Início</a></li>
+                <li><a href="/index.html/#empreendimentos">Empreendimentos</a></li>
+                <li><a href="/index.html/#sobre">Sobre</a></li>
+                <li><a href="/index.html/#parceiros">Parceiros</a></li>
+                <li><a href="/index.html/#rodape">Contatos</a></li>
+            </menu>
+            <menu class="header-btns">
+                <a href="/site/login/login.html" class="btn2">Entrar</a>
+                <a href="/site/login/register.html" class="btn1">Cadastre-se</a>
+            </menu>
+        </nav>
+    </header>
+
     <!-- CONTEÚDO -->
     <div class="simulation-page container">
 
         <!-- NOME DO EMPREENDIMENTO -->
         <hgroup class="quadra-titulo">
-            <span class="titulo-tipo">Condomínio Fechado</span>
-            <h2 class="titulo-nome">Quintas do Pontal</h2>
-            <p class="titulo-local">Formiga - MG</p>
+            <span class="titulo-tipo closed-condo">Condomínio Fechado</span>
+            <h2 class="titulo-nome">Arvoredo do Tripuí</h2>
+            <p class="titulo-local">Aramantina - MG</p>
         </hgroup>
+
+        <picture class="quadra-mapa">
+            <img src="/assets/site/products/arvoredo-do-tripui/masterplan/planta-arvoredo-tripui.png" alt="">
+        </picture>
 
         <!-- INFOS DA QUADRA -->
         <section class="quadra-info">
@@ -26,7 +54,7 @@
                     <h4>Lote <label id="LoteTxt">02</label></h4>
                     <p>
                         <span>Área Total:</span>
-                        <label id="ValorArea" class="lote-dim">501,00 m2</label>
+                        <label id="ValorArea" class="lote-dim">501,00 m²</label>
                     </p>
                     <p>
                         <span>Valor:</span>
@@ -61,13 +89,15 @@
             <div class="simulador-container">
                 <div class="simulador-escolha">
                     <div>
-                        <label for="quadra">Quadra 07</label>
+                        <label for="quadra">Quadra</label>
                         <select id="QuadraBlock">
+                            <option value="1">07</option>
                         </select>
                     </div>
                     <div>
-                        <label for="lote">Lote 02</label>
+                        <label for="lote">Lote</label>
                         <select id="IdNumber">
+                            <option value="1">02</option>
                         </select>
                     </div>
                     <div>
@@ -82,7 +112,7 @@
                             <option value="2">Curto</option>
                             <option value="3">Flexível</option>
                         </select>
-                        <button id="infoTipoPlano">Saiba mais</button>
+                        <button id="btn-plan-types">Saiba mais</button>
                     </div>
                 </div>
 
@@ -134,12 +164,92 @@
 
             <div class="simulador-btns">
                 <span>
-                    <p>Já visitou o empreendimento?</p>
+                    <span>Já visitou o empreendimento?</span>
                     <button>Compre por aqui</button>
                 </span>
                 <button type="submit" class="btn1">Agendar uma visita</button>
             </div>
         </section>
     </div>
+
+    <!-- RODAPÉ -->
+    <footer id="rodape" class="footer ">
+        <div class="footer-conteudo container">
+            <img class="logo-vertical" src="/assets/site/footer/logo-v-64.svg" alt="Logo vertical URBLOT" loading="lazy" />
+            <span>ficou alguma dúvida?</span>
+            <h2>Fale com a gente!</h2>
+            <menu class="footer-btns">
+                <button class="btn1 whatsapp">
+                    <a href="https://api.whatsapp.com/send?phone=5531995484202&text=Oi%2C%20gostaria%20de%20falar%20sobre%20a%20URBLOT" target="_blank">Chame no WhatsApp</a>
+                </button>
+                <button class="btn1 email">
+                    <a href="mailto: gustavokelvinm@urblot.com.br" target="_blank">Mande um E-mail</a>
+                </button>
+            </menu>
+            <p class="copyright">
+                <i>URBLOT<sup>®</sup>2023 -</i>
+                <span>Todos os Direitos Reservados</span>
+            </p>
+        </div>
+    </footer>
+
+    <!-- MODAL PLANOS -->
+    <div class="card-page" id="modal-plan-types">
+        <div class="card-wrapper">
+            <a class="btn-close" id="btn-close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <circle cx="12" cy="12" r="11" fill="var(--c50)" />
+                    <path d="M15.7072 9.70701L13.4142 12L15.7072 14.293C16.0982 14.684 16.0982 15.316 15.7072 15.707C15.5122 15.902 15.2562 16 15.0002 16C14.7442 16 14.4883 15.902 14.2933 15.707L12.0002 13.414L9.70725 15.707C9.51225 15.902 9.25625 16 9.00025 16C8.74425 16 8.48825 15.902 8.29325 15.707C7.90225 15.316 7.90225 14.684 8.29325 14.293L10.5863 12L8.29325 9.70701C7.90225 9.31601 7.90225 8.68401 8.29325 8.29301C8.68425 7.90201 9.31625 7.90201 9.70725 8.29301L12.0002 10.586L14.2933 8.29301C14.6843 7.90201 15.3162 7.90201 15.7072 8.29301C16.0982 8.68401 16.0982 9.31601 15.7072 9.70701Z" fill="var(--c00)" />
+                </svg>
+            </a>
+            <hgroup class="card-header">
+                <img src="/assets/site/icons/tax1.svg" alt="Ícone de calculadora e moeda">
+                <h2>Tipos de Plano</h2>
+                <p>A <i>URBLOT</i> oferece 3 planos de pagamento para que você possa investir no <em>Quintas do Pontal</em> de forma inteligente e planejada.</p>
+            </hgroup>
+            <ul class="card-list" id="listModal">
+                <li>
+                    <img src="/assets/site/icons/tax2.svg" alt="">
+                    <div>
+                        <h3>Plano Investidor</h3>
+                        <p>
+                            Mínimo de 50% de entrada <br />
+                            Financiamento em até 24 meses <br />
+                            sem juros e correções
+                        </p>
+                    </div>
+
+                </li>
+                <li>
+                    <img src="/assets/site/icons/tax3.svg" alt="">
+                    <div>
+                        <h3>Plano Curto</h3>
+                        <p>
+                            Mínimo de 30% de entrada <br />
+                            Financiamento em até 48 meses <br />
+                            sem juros + IPCA
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <img src="/assets/site/icons/tax4.svg" alt="">
+                    <div>
+                        <h3>Plano Flexível</h3>
+                        <p>
+                            Mínimo de 15% de entrada dividida <br />
+                            em até 7x <br />
+                            Financiamento em até 156 meses <br />
+                            + juros de 0,5% a.m. + IPCA
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <footer class="card-footer">
+                <img src="/assets/site/logo/icon-24.svg" alt="">
+            </footer>
+        </div>
+    </div>
+
+    <script src="/js/plan-types.js"></script>
 </body>
 </html>

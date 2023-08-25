@@ -1,75 +1,342 @@
-/* #region --- SIMULADOR */
+/* #region --- PÁGINA */
 
-.emp-simulador {
-    margin-bottom: 10rem;
-    margin-left: 50%;
-
-    display: flex;
-    flex-direction: column;
+.simulation-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-block: 3rem;
+    position: relative;
 }
 
-.emp-simulador h3 {
+.simulation-page:before {
+    content: '';
+    display: inline-block;
+    width: calc(100% - 10rem);
+    height: 19rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 1rem;
+    position: absolute;
+    top: -3.5rem;
+    left: 5rem;
+    z-index: -1;
+}
+
+@media (max-width: 1440px) {
+    .simulation-page {
+        margin-top: 3rem;
+    }
+
+    .simulation-page:before {
+        width: calc(100% - 4rem);
+        height: 15rem;
+        top: -3rem;
+        left: 2rem;
+    }
+}
+
+@media (max-width: 720px) {
+    .simulation-page {
+        grid-template-columns: 1fr;
+        margin-top: 1rem;
+    }
+
+    .simulation-page:before {
+        display: none;
+    }
+}
+
+/* #endregion */
+
+/* #region --- TÍTULO */
+
+.quadra-titulo {
+    margin-left: 4rem;
+    height: max-content;
+}
+
+.titulo-tipo {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--c00);
+    background-color: var(--c30);
+    padding: .25rem .5rem;
+    border-radius: .25rem;
+    transition: .3s ease;
+}
+
+.closed-condo:hover {
+    background-color: var(--s2);
+}
+
+.titulo-nome {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--p5);
+    margin-top: .375rem;
+}
+
+.titulo-local {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--c80);
+}
+
+.quadra-mapa {
+    max-width: 25rem;
+    margin-left: 4rem;
+}
+
+.quadra-mapa img {
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.quadra-mapa img:hover {
+    scale: 102%;
+}
+
+/* #endregion */
+
+/* #region --- RESPONSIVO TÍTULO */
+
+@media (max-width: 1440px) {
+    .quadra-titulo hgroup {
+        margin-bottom: 0rem;
+    }
+
+    .titulo-tipo {
+        font-size: 0.875rem;
+    }
+
+    .titulo-nome {
+        font-size: 1.5rem;
+    }
+
+    /* .titulo-nome::before {
+        top: 1.2rem;
+    } */
+
+    .titulo-local {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 1080px) {
+    .quadra-titulo hgroup {
+        margin-left: 2rem;
+    }
+}
+
+/* #endregion */
+
+/* #region --- INFOS */
+
+.quadra-info {
+    margin-left: 4rem;
+    position: relative;
+}
+
+.quadra-info h3 {
+    font-size: 0.875rem;
+    color: var(--c00);
+    background-color: var(--p3);
+    padding: .25rem .5rem;
+    border-radius: .25rem;
+    max-width: max-content;
+
+    position: absolute;
+    top: -0.75rem;
+    left: 1.5rem;
+}
+
+.info-lote {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 2rem;
+    align-items: end;
+
+    background-color: var(--c00);
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow1);
+    padding: 1rem 1.5rem;
+    max-width: max-content;
+}
+
+.info-lote h4 {
+    font-size: 1rem;
+    color: var(--p4);
+    margin-bottom: 0.25rem;
+}
+
+.info-lote p > span {
+    font-size: 0.875;
+    font-weight: 600;
+    color: var(--p3);
+}
+
+.info-lote p + p {
+    margin-top: 0.25rem;
+}
+
+.info-lote p > label {
+    font-weight: 500;
+    color: var(--c80);
+    margin-left: 0.25rem;
+}
+
+/* #endregion */
+
+/* #region --- RESPONSIVO INFOS */
+
+@media (max-width: 1440px) {
+    .quadra-info h3 {
+        font-size: 1.25rem;
+    }
+
+    .info-lote h4 {
+        font-size: 1.125rem;
+    }
+
+    .info-lote p,
+    .info-lote span {
+        font-size: 0.875rem;
+        font-weight: 500;
+    }
+}
+
+@media (max-width: 1080px) {
+    .quadra-info {
+        margin-left: 1rem;
+        margin-top: 0rem;
+    }
+
+    .quadra-info h3 {
+        font-size: 1.125rem;
+    }
+
+    .info-lote {
+        padding: 1.5rem;
+    }
+
+    .info-lote h4 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 720px) {
+    .quadra-info {
+        display: none;
+    }
+}
+
+/* #endregion */
+
+/* #region --- SIMULADOR */
+
+.quadra-simulador {
+    grid-column: 2;
+    grid-row: 1/4;
+    display: flex;
+    flex-direction: column;
+    margin-right: 2rem;
+}
+
+.quadra-simulador h1 {
     font-size: 1.5rem;
     color: var(--p4);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     margin-left: 1.5rem;
 }
 
-.emp-simulador h4 {
+.quadra-simulador h4 {
     font-size: 1rem;
-    color: var(--p3);
-    margin: 0.75rem 0 0.25rem 2rem;
+    font-weight: 700;
+    color: var(--p4);
+    margin: 1.125rem 0 0.25rem 1.5rem;
 }
 
 .simulador-container {
     background: var(--c05);
-    border-radius: 1rem;
-    padding: 2rem 1.5rem 1.5rem 1.5rem;
-    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--c20);
+    border-radius: 0.75rem;
+    padding: 1.25rem 0.875rem 0.875rem;
+    box-shadow: var(--shadow1);
 }
 
 .simulador-container label {
     font-size: 0.75rem;
-    font-weight: 400;
+    font-weight: 500;
     color: var(--c60);
     margin-left: 0.25rem;
+    margin-bottom: 0.25rem;
 }
 
-.simulador-container input {
+.simulador-container input,
+.simulador-container select {
     height: 2.5rem;
     border-radius: 0.25rem;
     border: 1px solid var(--c20);
     font-size: 1rem;
     font-weight: 500;
-
-    padding: 6px 12px;
+    padding-inline: 0.75rem;
     width: 100%;
-    box-sizing: border-box;
 }
 
-.simulador-container input:focus {
+/* div:has(> select) {
+    position: relative;
+}
+
+div:has(select)::before {
+    content: '';
+    display: inline-block;
+    width: 0.75rem;
+    height: 0.75rem;
+    aspect-ratio: 1/1;
+    background: url('/assets/site/btn-icons/arrrow.svg') no-repeat;
+    position: absolute;
+    bottom: 0.875rem;
+    right: 1rem;
+    z-index: 10;
+} */
+
+.simulador-container input:focus,
+.simulador-container select:focus {
     outline: none;
     background: #fff;
     border: solid 1px var(--p2);
 }
 
-.simulador-escolha > div,
-.simulador-entrada > div,
-.simulador-financiamento > div {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-}
-
 .simulador-escolha {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    padding-inline: 1rem;
+    gap: 0.75rem 1rem;
+    padding-inline: 0.75rem;
 }
 
-.simulador-escolha input {
+.simulador-escolha input,
+.simulador-escolha select {
     background-color: var(--c00);
+}
+
+.simulador-escolha div:has(button) {
+    position: relative;
+}
+
+.simulador-escolha button {
+    font-size: 0.675rem;
+    color: var(--c00);
+    background-color: var(--c30);
+    padding: 2px 8px;
+    border-radius: 1rem;
+    position: absolute;
+    top: 0;
+    right: .25rem;
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+.simulador-escolha button:hover {
+    background-color: var(--p3);
+    scale: 103%;
 }
 
 .simulador-entrada,
@@ -77,7 +344,7 @@
     background-color: var(--c00);
     border-radius: 0.5rem;
     border: 1px solid var(--c10);
-    padding: 1rem;
+    padding: 0.875rem 0.75rem 0.75rem;
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -85,47 +352,116 @@
 }
 
 .simulador-entrada input,
+.simulador-entrada select,
 .simulador-financiamento input {
     background-color: var(--c05);
 }
 
-.simulador-entrada > div:nth-child(3),
-.simulador-entrada > div:nth-child(4),
-.simulador-entrada > div:nth-child(5) {
+.simulador-entrada > div:nth-child(-n+3) {
+    grid-row: 1;
+}
+
+.simulador-entrada > div:nth-child(n+4) {
     grid-row: 2;
 }
 
-.emp-simulador button {
-    margin-top: 1.5rem;
+.simulador-btns {
+    display: flex;
+    gap: 1.25rem;
     align-self: end;
+    align-items: center;
+    margin-top: 1rem;
 }
 
-.emp-simulador button::before {
+.simulador-btns > button::before {
     content: '';
     display: inline-block;
-    width: 24px;
-    height: 24px;
-    background: url(../../img/site/icones/agendar.png);
+    width: 1.5rem;
+    height: 1.5rem;
+    background: url('/assets/site/btn-icons/schedule.svg');
 }
 
-.emp-simulador button:hover::before {
-    background: url(../../img/site/icones/agendar-hover.png);
+.simulador-btns > span {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--c60);
+}
+
+.simulador-btns > span > button {
+    color: var(--p3);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.simulador-btns > span > button:hover {
+    color: var(--p2);
 }
 
 /* #endregion */
 
 /* #region --- RESPONSIVO SIMULADOR */
 
+@media (max-width: 1440px) {
+    .quadra-simulador {
+        margin-right: 2rem;
+    }
+
+    .quadra-simulador h3 {
+        font-size: 1.25rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .quadra-simulador h4 {
+        font-size: 0.875rem;
+    }
+
+    .simulador-container {
+        padding: 1.25rem 0.75rem 0.75rem 0.75rem;
+    }
+
+    .simulador-container input,
+    .simulador-container select {
+        height: 2rem;
+        font-size: 0.875rem;
+    }
+
+    .simulador-escolha,
+    .simulador-entrada,
+    .simulador-financiamento {
+        gap: 0.5rem;
+    }
+
+    .simulador-entrada,
+    .simulador-financiamento {
+        padding: 0.75rem;
+    }
+}
+
 @media (max-width: 1080px) {
-    .emp-simulador {
+    .quadra-simulador {
         margin-bottom: 4rem;
         margin-left: 0;
         margin-top: 2rem;
     }
+
+    .simulador-container label {
+        margin-left: 0;
+    }
 }
 
 @media (max-width: 720px) {
-    .emp-simulador {
+    .quadra-simulador {
+        grid-column: initial;
+        grid-row: initial;
+        display: flex;
+        flex-direction: column;
         margin-inline: 0.5rem;
         margin-bottom: 0;
         padding-bottom: 4rem;
@@ -135,7 +471,7 @@
         padding: 1.5rem 0.5rem 0.5rem 0.5rem;
     }
 
-    .emp-simulador button {
+    .quadra-simulador button {
         margin-top: 1.5rem;
         align-self: initial;
         justify-content: center;
@@ -147,14 +483,14 @@
     .simulador-financiamento {
         padding-inline: 0.5rem;
     }
+
+    .simulador-btns {
+        margin-top: 1rem;
+    }
 }
 
 /* #endregion */
 
-/* #region --- FUNDO */
-
-.fundo {
-    background-color: var(--b1);
+.hidden {
+    display: none;
 }
-
-/* #endregion */
