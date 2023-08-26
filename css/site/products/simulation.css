@@ -356,6 +356,11 @@
     grid-row: 2;
 }
 
+.disabled {
+    color: var(--c50);
+    pointer-events: none;
+}
+
 .simulador-btns {
     display: flex;
     gap: 1.25rem;
@@ -483,21 +488,3 @@
 }
 
 /* #endregion */
-
-.hidden {
-    display: none;
-}
-
-.stop-scrolling-html {
-    overflow-y: initial;
-}
-
-.stop-scrolling-body {
-    overflow: hidden;
-    margin-right: 0.75rem;
-}
-
-.disabled {
-    color: var(--c50);
-    pointer-events: none;
-}

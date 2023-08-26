@@ -45,6 +45,19 @@ details > summary {
 	list-style-type: none;
 }
 
+.hidden {
+	display: none;
+}
+
+.stop-scrolling-html {
+	overflow-y: initial;
+}
+
+.stop-scrolling-body {
+	overflow: hidden;
+	margin-right: 0.75rem;
+}
+
 /* BACKGROUND */
 
 .site {
