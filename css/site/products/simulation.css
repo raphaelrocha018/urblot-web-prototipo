@@ -63,8 +63,12 @@
     transition: .3s ease;
 }
 
-.closed-condo:hover {
+.titulo-tipo:hover > .closed-condo {
     background-color: var(--s2);
+}
+
+.titulo-tipo:hover > .planned-neighborhood {
+    background-color: var(--s1);
 }
 
 .titulo-nome {
@@ -496,6 +500,5 @@ div:has(select)::before {
 }
 
 .stop-scrolling {
-    height: 100%;
     overflow: hidden;
 }

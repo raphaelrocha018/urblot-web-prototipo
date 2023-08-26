@@ -13,6 +13,12 @@ function closePlanTypes() {
     modalPlanTypes.classList.add('hidden')
 }
 
+function handleOutsideClick(event) {
+    if (event.target == this) {
+        closePlanTypes()
+    }
+}
+
 btnPlanTypes.addEventListener('click', openPlanTypes)
 btnClose.addEventListener('click', closePlanTypes)
-
+modalPlanTypes.addEventListener('click', handleOutsideClick)

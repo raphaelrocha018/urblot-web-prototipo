@@ -4,18 +4,18 @@
     display: grid;
     min-height: 100dvh;
     place-content: center;
-    animation: show-side .6s forwards;
+    animation: show-up .6s forwards;
 }
 
-@keyframes show-side {
+@keyframes show-up {
     0% {
         opacity: 0;
-        transform: translateX(-40px);
+        transform: translateY(40px);
     }
 
     100% {
         opacity: 1;
-        transform: translateX(0);
+        transform: translateY(0);
     }
 }
 

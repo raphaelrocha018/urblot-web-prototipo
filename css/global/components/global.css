@@ -20,6 +20,12 @@ ol {
 
 html {
 	scroll-behavior: smooth;
+	height: -webkit-fill-available;
+	overflow-y: scroll;
+}
+
+body {
+	height: -webkit-fill-available;
 }
 
 img {
