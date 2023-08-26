@@ -285,27 +285,14 @@
     width: 100%;
 }
 
-/* div:has(> select) {
-    position: relative;
+.simulador-container select {
+    background: url('/assets/site/btn-icons/arrrow.svg') no-repeat right 0.75rem center;
 }
-
-div:has(select)::before {
-    content: '';
-    display: inline-block;
-    width: 0.75rem;
-    height: 0.75rem;
-    aspect-ratio: 1/1;
-    background: url('/assets/site/btn-icons/arrrow.svg') no-repeat;
-    position: absolute;
-    bottom: 0.875rem;
-    right: 1rem;
-    z-index: 10;
-} */
 
 .simulador-container input:focus,
 .simulador-container select:focus {
     outline: none;
-    background: #fff;
+    background: #fff url('/assets/site/btn-icons/arrrow.svg') no-repeat right 0.75rem center;
     border: solid 1px var(--p2);
 }
 
@@ -385,7 +372,7 @@ div:has(select)::before {
     background: url('/assets/site/btn-icons/schedule.svg');
 }
 
-.simulador-btns > span {
+.simulador-btns > a {
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -393,19 +380,21 @@ div:has(select)::before {
     font-size: 0.875rem;
     font-weight: 500;
     color: var(--c60);
+
+    cursor: pointer;
 }
 
-.simulador-btns > span > button {
+.simulador-btns > a > button {
     color: var(--p3);
     font-size: 0.875rem;
     font-weight: 600;
-    text-decoration: underline;
-    cursor: pointer;
     transition: .3s ease;
+    cursor: pointer;
 }
 
-.simulador-btns > span > button:hover {
+.simulador-btns > a:hover > button {
     color: var(--p2);
+    text-decoration: underline;
 }
 
 /* #endregion */
@@ -499,6 +488,16 @@ div:has(select)::before {
     display: none;
 }
 
-.stop-scrolling {
+.stop-scrolling-html {
+    overflow-y: initial;
+}
+
+.stop-scrolling-body {
     overflow: hidden;
+    margin-right: 0.75rem;
+}
+
+.disabled {
+    color: var(--c50);
+    pointer-events: none;
 }

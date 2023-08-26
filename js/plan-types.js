@@ -1,15 +1,18 @@
+const html = document.documentElement
 const body = document.querySelector('body')
 const modalPlanTypes = document.querySelector('#modal-plan-types')
 const btnPlanTypes = document.querySelector('#btn-plan-types')
 const btnClose = document.querySelector('#btn-close')
 
 function openPlanTypes() {
-    body.classList.add('stop-scrolling')
+    html.classList.add('stop-scrolling-html')
+    body.classList.add('stop-scrolling-body')
     modalPlanTypes.classList.remove('hidden')
 }
 
 function closePlanTypes() {
-    body.classList.remove('stop-scrolling')
+    html.classList.remove('stop-scrolling-html')
+    body.classList.remove('stop-scrolling-body')
     modalPlanTypes.classList.add('hidden')
 }
 
