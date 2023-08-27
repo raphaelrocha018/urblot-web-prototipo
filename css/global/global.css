@@ -55,7 +55,10 @@ details > summary {
 
 .stop-scrolling-body {
 	overflow: hidden;
-	/* margin-right: 0.75rem; */
+}
+
+.compensate-scrollbar {
+	margin-right: 0.75rem;
 }
 
 /* BACKGROUND */

@@ -7,10 +7,11 @@ const btnClose = document.querySelector('#btn-close')
 
 function openPlanTypes() {
     html.classList.add('stop-scrolling-html')
+    body.classList.add('stop-scrolling-body')
 
-    // if (!mobile) {
-        body.classList.add('stop-scrolling-body')
-    // }
+    if (!mobile) {
+        body.classList.add('compensate-scrollbar')
+    }
 
     modalPlanTypes.classList.remove('hidden')
 }
