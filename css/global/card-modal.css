@@ -118,13 +118,55 @@
 
 /* #region --- RESPONSIVO */
 
-@media (min-width: 1080px) and (max-width: 1440px) {
+@media (min-width: 720px) and (max-width: 1440px) {
     .card-wrapper {
         scale: 85%;
     }
 
     .card-wrapper:hover {
         scale: 85.5%;
+    }
+}
+
+@media (max-width: 720px) {
+    .card-page {
+        place-content: end;
+        padding: .25rem;
+    }
+
+    .card-wrapper {
+        padding-top: 3rem;
+        width: 100%;
+    }
+
+    .card-wrapper::before {
+        content: '';
+        display: inline-block;
+        width: 2rem;
+        height: 0.25rem;
+        border-radius: 0.25rem;
+        background-color: var(--c30);
+        position: absolute;
+        top: 0.75rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 200;
+    }
+
+    @keyframes show-up {
+        0% {
+            opacity: 0;
+            transform: translateY(200px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .card-footer {
+        margin-top: 1rem;
     }
 }
 
