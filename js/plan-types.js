@@ -19,6 +19,8 @@ function openPlanTypes() {
 function closePlanTypes() {
     html.classList.remove('stop-scrolling-html')
     body.classList.remove('stop-scrolling-body')
+    body.classList.remove('compensate-scrollbar')
+
     modalPlanTypes.classList.add('hidden')
 }
 
