@@ -8,10 +8,10 @@ const btnClose = document.querySelector('#btn-close')
 function openPlanTypes() {
     html.classList.add('stop-scrolling-html')
 
-    if (!mobile) {
+    // if (!mobile) {
         body.classList.add('stop-scrolling-body')
-    }
-    
+    // }
+
     modalPlanTypes.classList.remove('hidden')
 }
 

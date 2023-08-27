@@ -55,7 +55,7 @@ details > summary {
 
 .stop-scrolling-body {
 	overflow: hidden;
-	margin-right: 0.75rem;
+	/* margin-right: 0.75rem; */
 }
 
 /* BACKGROUND */
