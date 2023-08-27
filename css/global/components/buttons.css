@@ -116,6 +116,12 @@
 /* #region --- RESPONSIIVO */
 
 @media (max-width: 1440px) {
+
+	.btn1,
+	.btn2 {
+		padding: 0.675rem 1.75rem;
+	}
+
 	.btn3 {
 		font-size: 0.875rem;
 	}

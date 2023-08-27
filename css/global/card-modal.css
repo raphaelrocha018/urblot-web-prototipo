@@ -115,3 +115,17 @@
     margin-top: 2rem;
     margin-right: 1rem;
 }
+
+/* #region --- RESPONSIVO */
+
+@media (min-width: 1080px) and (max-width: 1440px) {
+    .card-wrapper {
+        scale: 85%;
+    }
+
+    .card-wrapper:hover {
+        scale: 85.5%;
+    }
+}
+
+/* #endregion */

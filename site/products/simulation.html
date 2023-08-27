@@ -35,7 +35,7 @@
     <!-- CONTEÚDO -->
     <div class="simulation-page container">
 
-        <!-- NOME DO EMPREENDIMENTO -->
+        <!-- EMPREENDIMENTO -->
         <hgroup class="quadra-titulo">
             <span class="titulo-tipo closed-condo">Condomínio Fechado</span>
             <h2 class="titulo-nome">Arvoredo do Tripuí</h2>
@@ -83,7 +83,6 @@
         </section>
 
         <!-- SIMULADOR -->
-
         <section class="quadra-simulador">
             <h1>Faça uma simulação</h1>
             <div class="simulador-container">
@@ -120,23 +119,27 @@
                 <div class="simulador-entrada">
                     <div>
                         <label for="value-first-pay">Valor da Entrada</label>
-                        <input type="text" id="Sinal" value="R$ 15.253,48">
+                        <input type="text" inputmode="numeric" id="Sinal" value="R$ 15.253,48">
                     </div>
 
                     <div>
                         <label for="percentual">Percentual</label>
-                        <input type="text" id="PercentualSinal" name="percentual" value="25%">
+                        <input type="text" inputmode="numeric" id="PercentualSinal" name="percentual" value="25%">
                     </div>
 
                     <div id="Container">
                         <label for="value-first-pay">Núm. de Parcelas</label>
                         <select id="parcelasEntrada">
+                            <option value="" selected>1</option>
+                            <option value="1">2</option>
+                            <option value="2">3</option>
+                            <option value="3">4</option>
                         </select>
                     </div>
 
                     <div id="ValorParcela">
                         <label for="valor-parcela">Valor da Parcela</label>
-                        <input type="text" id="valorParcelaEntrada" name="valor-parcela" value="R$ 2.637,61" readonly>
+                        <input type="text" inputmode="numeric" id="valorParcelaEntrada" name="valor-parcela" value="R$ 2.637,61">
                     </div>
 
                     <div id="VencimentoDIV">
@@ -153,7 +156,7 @@
                     </div>
                     <div>
                         <label for="parcelas-restante">Núm. de Parcelas</label>
-                        <input type="number" min="0" id="parcelas" name="parcelas-restante" value="156">
+                        <input type="number" inputmode="numeric" min="0" id="parcelas" name="parcelas-restante" value="156">
                     </div>
                     <div>
                         <label for="valor-parc-restante">Valor da Parcela</label>

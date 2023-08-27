@@ -54,6 +54,12 @@
 /* #endregion */
 
 /* #region --- RESPONSIVO CARD */
+@media (min-width: 1080px) and (max-width: 1440px) {
+    .login-page {
+        scale: 83%;
+    }
+}
+
 @media (max-width: 720px) {
     .login-page {
         display: flex;
