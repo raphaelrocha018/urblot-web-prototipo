@@ -65,7 +65,6 @@
 
 .quadra-titulo {
     margin-left: 4rem;
-    height: max-content;
 }
 
 .titulo-tipo {
@@ -102,14 +101,11 @@
 .quadra-mapa {
     max-width: 25rem;
     margin-left: 4rem;
-}
-
-.quadra-mapa img {
     cursor: pointer;
     transition: .3s ease;
 }
 
-.quadra-mapa img:hover {
+.quadra-mapa:hover {
     scale: 102%;
 }
 
@@ -177,7 +173,6 @@
     background-color: var(--p3);
     padding: .25rem .5rem;
     border-radius: .25rem;
-    max-width: max-content;
 
     position: absolute;
     top: -0.75rem;
@@ -235,7 +230,6 @@
 
 @media (max-width: 1080px) {
     .quadra-info {
-        margin-left: 0;
         margin: 2rem auto 0;
     }
 }
@@ -247,9 +241,11 @@
 .quadra-simulador {
     grid-column: 2;
     grid-row: 1/4;
+
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
+
     margin-right: 2rem;
 }
 

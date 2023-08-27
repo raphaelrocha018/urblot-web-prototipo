@@ -50,6 +50,9 @@ details > summary {
 
 .stop-scrolling-body {
 	overflow: hidden;
+	-webkit-overflow-scrolling: none;
+	overscroll-behavior: none;
+	touch-action: none;
 }
 
 .compensate-scrollbar {

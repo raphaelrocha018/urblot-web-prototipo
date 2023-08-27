@@ -1,6 +1,6 @@
 .card-page {
     display: grid;
-    height: 100vh;
+    height: 100dvh;
     width: 100%;
     place-content: center;
     background: rgba(235, 235, 235, 0.6);
@@ -9,8 +9,8 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 100;
-    animation: fade-in .4s forwards;
+    z-index: 1;
+    animation: fade-in .5s forwards;
 }
 
 @keyframes fade-in {
@@ -31,13 +31,8 @@
     padding: 5rem 2rem 2rem 3rem;
     position: relative;
     width: 27rem;
-    transform: translateY(40px);
     transition: .3s ease;
-    animation: show-up .4s forwards;
-}
-
-.card-wrapper:hover {
-    scale: 100.5%;
+    animation: show-up .5s forwards;
 }
 
 @keyframes show-up {
@@ -52,6 +47,10 @@
     }
 }
 
+.card-wrapper:hover {
+    scale: 100.5%;
+}
+
 .card-wrapper::after {
     content: '';
     display: inline-block;
@@ -62,7 +61,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    z-index: -1;
+    z-index: 2;
 }
 
 .card-header > h2 {
@@ -114,7 +113,14 @@
     display: grid;
     place-content: center;
     margin-top: 2rem;
-    margin-right: 1rem;
+}
+
+.card-footer img {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
 }
 
 /* #region --- RESPONSIVO */
@@ -137,21 +143,8 @@
 
     .card-wrapper {
         padding-top: 3rem;
-        border-radius: 2.5rem;
+        border-radius: 2rem 2rem 2.5rem 2.5rem;
         width: 100%;
-        transform: translateY(300px);
-    }
-
-    @keyframes show-up {
-        0% {
-            opacity: 0;
-            transform: translateY(300px);
-        }
-
-        100% {
-            opacity: 1;
-            transform: translateY(0);
-        }
     }
 
     .card-wrapper::before {
