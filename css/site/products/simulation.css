@@ -324,7 +324,7 @@
 .simulador-escolha button {
     font-size: 0.675rem;
     color: var(--c00);
-    background-color: var(--c30);
+    background-color: var(--c40);
     padding: 2px 8px;
     border-radius: 1rem;
     position: absolute;
@@ -357,11 +357,7 @@
     background-color: var(--c05);
 }
 
-.simulador-entrada > div:nth-child(-n+3) {
-    grid-row: 1;
-}
-
-.simulador-entrada > div:nth-child(n+4) {
+.simulador-entrada > div:nth-child(n+3) {
     grid-row: 2;
 }
 
