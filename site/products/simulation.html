@@ -8,193 +8,195 @@
     <link rel="stylesheet" href="/style.css" />
 </head>
 <body class="site">
-    <!-- CABEÇALHO -->
-    <header id="header" class="container">
-        <nav class="header-navbar">
-            <a class="logo" href="/index.html">
-                <picture class="logo">
-                    <source srcset="/assets/site/header/logo-h-20.svg" media="(max-width: 720px)">
-                    <source srcset="/assets/site/header/logo-h-24.svg" media="(max-width: 1440px)">
-                    <img src="/assets/site/header/logo-h-32.svg" alt="Logotipo URBLOT">
-                </picture>
-            </a>
-            <menu class="header-menu">
-                <li><a href="/index.html">Início</a></li>
-                <li><a href="/index.html/#empreendimentos">Empreendimentos</a></li>
-                <li><a href="/index.html/#sobre">Sobre</a></li>
-                <li><a href="/index.html/#parceiros">Parceiros</a></li>
-                <li><a href="/index.html/#rodape">Contatos</a></li>
-            </menu>
-            <menu class="header-btns">
-                <a href="/site/login/login.html" class="btn2">Entrar</a>
-                <a href="/site/login/register.html" class="btn1">Cadastre-se</a>
-            </menu>
-        </nav>
-    </header>
-
-    <!-- CONTEÚDO -->
-    <div class="simulation-page container">
-
-        <!-- EMPREENDIMENTO -->
-        <hgroup class="quadra-titulo">
-            <span class="titulo-tipo closed-condo">Condomínio Fechado</span>
-            <h2 class="titulo-nome">Arvoredo do Tripuí</h2>
-            <p class="titulo-local">Aramantina - MG</p>
-        </hgroup>
-
-        <picture class="quadra-mapa">
-            <img src="/assets/site/products/arvoredo-do-tripui/masterplan/planta-arvoredo-tripui.png" alt="">
-        </picture>
-
-        <!-- INFOS DA QUADRA -->
-        <section class="quadra-info">
-            <h3>Quadra <label id="QuadraTxt">07</label></h3>
-            <div class="info-lote">
-                <div>
-                    <h4>Lote <label id="LoteTxt">02</label></h4>
-                    <p>
-                        <span>Área Total:</span>
-                        <label id="ValorArea" class="lote-dim">501,00 m²</label>
-                    </p>
-                    <p>
-                        <span>Valor:</span>
-                        <label id="ValorLote1" class="lote-dim">R$ 118.466,46</label>
-                    </p>
-                </div>
-                <div>
-                    <p>
-                        <span>Frente:</span>
-                        <label id="AreaFrente" class="lote-dim">16,7 m</label>
-                    </p>
-                    <p>
-                        <span>Fundo:</span>
-                        <label id="AreaFundo" class="lote-dim">16,7 m</label>
-                    </p>
-                    <p>
-                        <span>Direita:</span>
-                        <label id="LadoDireito" class="lote-dim">30 m</label>
-                    </p>
-                    <p>
-                        <span>Esquerda:</span>
-                        <label id="LadoEsquerdo" class="lote-dim">30 m</label>
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- SIMULADOR -->
-        <section class="quadra-simulador">
-            <h1>Faça uma simulação</h1>
-            <div class="simulador-container">
-                <div class="simulador-escolha">
-                    <div>
-                        <label for="quadra">Quadra</label>
-                        <select id="QuadraBlock">
-                            <option value="1">07</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="lote">Lote</label>
-                        <select id="IdNumber">
-                            <option value="1">02</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="lote-value">Valor do Lote</label>
-                        <input type="text" id="valorLote" value="R$ 118.466,46" class="disabled" readonly />
-                    </div>
-                    <div>
-                        <label for="paying-plan">Tipo de Plano</label>
-                        <select id="tipoPlano">
-                            <option value="" selected>Selecione</option>
-                            <option value="1">Investidor</option>
-                            <option value="2">Curto</option>
-                            <option value="3">Flexível</option>
-                        </select>
-                        <button id="btn-plan-types">Saiba mais</button>
-                    </div>
-                </div>
-
-                <h4>Entrada</h4>
-                <div class="simulador-entrada">
-                    <div>
-                        <label for="value-first-pay">Valor da Entrada</label>
-                        <input type="text" inputmode="numeric" id="Sinal" value="R$ 15.253,48">
-                    </div>
-
-                    <div>
-                        <label for="percentual">Percentual</label>
-                        <input type="text" inputmode="numeric" id="PercentualSinal" name="percentual" value="25%">
-                    </div>
-
-                    <div id="Container">
-                        <label for="value-first-pay">Núm. de Parcelas</label>
-                        <select id="parcelasEntrada">
-                            <option value="" selected>1</option>
-                            <option value="1">2</option>
-                            <option value="2">3</option>
-                            <option value="3">4</option>
-                        </select>
-                    </div>
-
-                    <div id="ValorParcela">
-                        <label for="valor-parcela">Valor da Parcela</label>
-                        <input type="text" inputmode="numeric" id="valorParcelaEntrada" name="valor-parcela" value="R$ 2.637,61">
-                    </div>
-
-                    <div id="VencimentoDIV">
-                        <label for="vencimento">1º Vencimento</label>
-                        <input type="text" id="Vencimento" name="vencimento" value="25/07/2023" class="disabled" readonly>
-                    </div>
-                </div>
-
-                <h4>Financiamento</h4>
-                <div class="simulador-financiamento">
-                    <div>
-                        <label for="valor-restante">Valor Restante</label>
-                        <input type="text" id="SinalRestante" name="valor-restante" value="R$ 88.753,28" class="disabled" readonly>
-                    </div>
-                    <div>
-                        <label for="parcelas-restante">Núm. de Parcelas</label>
-                        <input type="number" inputmode="numeric" min="0" id="parcelas" name="parcelas-restante" value="156">
-                    </div>
-                    <div>
-                        <label for="valor-parc-restante">Valor da Parcela</label>
-                        <input type="text" id="valorParcela" name="valor-parc-restante" value="R$ 432,65" class="disabled" readonly>
-                    </div>
-                </div>
-            </div>
-
-            <div class="simulador-btns">
-                <a>
-                    <span>Já visitou o empreendimento?</span>
-                    <button>Compre por aqui</button>
+    <div class="simulation-page">
+        <!-- CABEÇALHO -->
+        <header id="header" class="container">
+            <nav class="header-navbar">
+                <a class="logo" href="/index.html">
+                    <picture class="logo">
+                        <source srcset="/assets/site/header/logo-h-20.svg" media="(max-width: 720px)">
+                        <source srcset="/assets/site/header/logo-h-24.svg" media="(max-width: 1440px)">
+                        <img src="/assets/site/header/logo-h-32.svg" alt="Logotipo URBLOT">
+                    </picture>
                 </a>
-                <button type="submit" class="btn1">Agendar uma visita</button>
-            </div>
-        </section>
-    </div>
+                <menu class="header-menu">
+                    <li><a href="/index.html">Início</a></li>
+                    <li><a href="/index.html/#empreendimentos">Empreendimentos</a></li>
+                    <li><a href="/index.html/#sobre">Sobre</a></li>
+                    <li><a href="/index.html/#parceiros">Parceiros</a></li>
+                    <li><a href="/index.html/#rodape">Contatos</a></li>
+                </menu>
+                <menu class="header-btns">
+                    <a href="/site/login/login.html" class="btn2">Entrar</a>
+                    <a href="/site/login/register.html" class="btn1">Cadastre-se</a>
+                </menu>
+            </nav>
+        </header>
 
-    <!-- RODAPÉ -->
-    <footer id="rodape" class="footer ">
-        <div class="footer-conteudo container">
-            <img class="logo-vertical" src="/assets/site/footer/logo-v-64.svg" alt="Logo vertical URBLOT" loading="lazy" />
-            <span>ficou alguma dúvida?</span>
-            <h2>Fale com a gente!</h2>
-            <menu class="footer-btns">
-                <button class="btn1 whatsapp">
-                    <a href="https://api.whatsapp.com/send?phone=5531995484202&text=Oi%2C%20gostaria%20de%20falar%20sobre%20a%20URBLOT" target="_blank">Chame no WhatsApp</a>
-                </button>
-                <button class="btn1 email">
-                    <a href="mailto: gustavokelvinm@urblot.com.br" target="_blank">Mande um E-mail</a>
-                </button>
-            </menu>
-            <p class="copyright">
-                <i>URBLOT<sup>®</sup>2023 -</i>
-                <span>Todos os Direitos Reservados</span>
-            </p>
-        </div>
-    </footer>
+        <!-- CONTEÚDO -->
+        <main class="simulation-content container">
+
+            <!-- EMPREENDIMENTO -->
+            <hgroup class="quadra-titulo">
+                <span class="titulo-tipo closed-condo">Condomínio Fechado</span>
+                <h2 class="titulo-nome">Arvoredo do Tripuí</h2>
+                <p class="titulo-local">Aramantina - MG</p>
+            </hgroup>
+
+            <picture class="quadra-mapa">
+                <img src="/assets/site/products/arvoredo-do-tripui/masterplan/planta-arvoredo-tripui.png" alt="">
+            </picture>
+
+            <!-- INFOS DA QUADRA -->
+            <section class="quadra-info">
+                <h3>Quadra <label id="QuadraTxt">07</label></h3>
+                <div class="info-lote">
+                    <div>
+                        <h4>Lote <label id="LoteTxt">02</label></h4>
+                        <p>
+                            <span>Área Total:</span>
+                            <label id="ValorArea" class="lote-dim">501,00 m²</label>
+                        </p>
+                        <p>
+                            <span>Valor:</span>
+                            <label id="ValorLote1" class="lote-dim">R$ 118.466,46</label>
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <span>Frente:</span>
+                            <label id="AreaFrente" class="lote-dim">16,7 m</label>
+                        </p>
+                        <p>
+                            <span>Fundo:</span>
+                            <label id="AreaFundo" class="lote-dim">16,7 m</label>
+                        </p>
+                        <p>
+                            <span>Direita:</span>
+                            <label id="LadoDireito" class="lote-dim">30 m</label>
+                        </p>
+                        <p>
+                            <span>Esquerda:</span>
+                            <label id="LadoEsquerdo" class="lote-dim">30 m</label>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SIMULADOR -->
+            <section class="quadra-simulador">
+                <h1>Faça uma simulação</h1>
+                <div class="simulador-container">
+                    <div class="simulador-escolha">
+                        <div>
+                            <label for="quadra">Quadra</label>
+                            <select id="QuadraBlock">
+                                <option value="1">07</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="lote">Lote</label>
+                            <select id="IdNumber">
+                                <option value="1">02</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="lote-value">Valor do Lote</label>
+                            <input type="text" id="valorLote" value="R$ 118.466,46" class="disabled" readonly />
+                        </div>
+                        <div>
+                            <label for="paying-plan">Tipo de Plano</label>
+                            <select id="tipoPlano">
+                                <option value="" selected>Selecione</option>
+                                <option value="1">Investidor</option>
+                                <option value="2">Curto</option>
+                                <option value="3">Flexível</option>
+                            </select>
+                            <button id="btn-plan-types">Saiba mais</button>
+                        </div>
+                    </div>
+
+                    <h4>Entrada</h4>
+                    <div class="simulador-entrada">
+                        <div>
+                            <label for="value-first-pay">Valor da Entrada</label>
+                            <input type="text" inputmode="numeric" id="Sinal" value="R$ 15.253,48">
+                        </div>
+
+                        <div>
+                            <label for="percentual">Percentual</label>
+                            <input type="text" inputmode="numeric" id="PercentualSinal" name="percentual" value="25%">
+                        </div>
+
+                        <div id="Container">
+                            <label for="value-first-pay">Núm. de Parcelas</label>
+                            <select id="parcelasEntrada">
+                                <option value="" selected>1</option>
+                                <option value="1">2</option>
+                                <option value="2">3</option>
+                                <option value="3">4</option>
+                            </select>
+                        </div>
+
+                        <div id="ValorParcela">
+                            <label for="valor-parcela">Valor da Parcela</label>
+                            <input type="text" inputmode="numeric" id="valorParcelaEntrada" name="valor-parcela" value="R$ 2.637,61">
+                        </div>
+
+                        <div id="VencimentoDIV">
+                            <label for="vencimento">1º Vencimento</label>
+                            <input type="text" id="Vencimento" name="vencimento" value="25/07/2023" class="disabled" readonly>
+                        </div>
+                    </div>
+
+                    <h4>Financiamento</h4>
+                    <div class="simulador-financiamento">
+                        <div>
+                            <label for="valor-restante">Valor Restante</label>
+                            <input type="text" id="SinalRestante" name="valor-restante" value="R$ 88.753,28" class="disabled" readonly>
+                        </div>
+                        <div>
+                            <label for="parcelas-restante">Núm. de Parcelas</label>
+                            <input type="number" inputmode="numeric" min="0" id="parcelas" name="parcelas-restante" value="156">
+                        </div>
+                        <div>
+                            <label for="valor-parc-restante">Valor da Parcela</label>
+                            <input type="text" id="valorParcela" name="valor-parc-restante" value="R$ 432,65" class="disabled" readonly>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="simulador-btns">
+                    <a>
+                        <span>Já visitou o empreendimento?</span>
+                        <button>Compre por aqui</button>
+                    </a>
+                    <button type="submit" class="btn1">Agendar uma visita</button>
+                </div>
+            </section>
+        </main>
+
+        <!-- RODAPÉ -->
+        <footer id="rodape" class="footer ">
+            <div class="footer-conteudo container">
+                <img class="logo-vertical" src="/assets/site/footer/logo-v-64.svg" alt="Logo vertical URBLOT" loading="lazy" />
+                <span>ficou alguma dúvida?</span>
+                <h2>Fale com a gente!</h2>
+                <menu class="footer-btns">
+                    <button class="btn1 whatsapp">
+                        <a href="https://api.whatsapp.com/send?phone=5531995484202&text=Oi%2C%20gostaria%20de%20falar%20sobre%20a%20URBLOT" target="_blank">Chame no WhatsApp</a>
+                    </button>
+                    <button class="btn1 email">
+                        <a href="mailto: gustavokelvinm@urblot.com.br" target="_blank">Mande um E-mail</a>
+                    </button>
+                </menu>
+                <p class="copyright">
+                    <i>URBLOT<sup>®</sup>2023 -</i>
+                    <span>Todos os Direitos Reservados</span>
+                </p>
+            </div>
+        </footer>
+    </div>
 
     <!-- MODAL PLANOS -->
     <div class="card-page hidden" id="modal-plan-types">
