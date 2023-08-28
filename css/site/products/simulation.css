@@ -608,8 +608,10 @@
 
 @media (max-width: 720px) {
     .map-page {
-        height: 100dvh;
+        height: 100%;
         width: max-content;
+        position: absolute;
+
         overflow-x: scroll;
         overflow-y: hidden;
     }
@@ -617,5 +619,10 @@
     .map-page map > img {
         height: 100vh;
         width: auto;
+
     }
+}
+
+.simulation-page {
+    position: fixed;
 }
