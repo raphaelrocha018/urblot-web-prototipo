@@ -605,3 +605,19 @@
 .hidden {
     display: none;
 }
+
+@media (max-width: 720px) {
+    .map-page {
+        overflow-x: scroll;
+        overflow-y: hidden;
+
+    }
+
+    .map-page map {
+        position: relative;
+        width: max-content;
+        height: 100%;
+        scale: 100%;
+
+    }
+}
