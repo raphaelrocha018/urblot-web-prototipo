@@ -37,3 +37,25 @@ function handleOutsideClick(event) {
 PlanTypes.btnOpen.addEventListener('click', openPlanTypes)
 PlanTypes.btnClose.addEventListener('click', closePlanTypes)
 PlanTypes.modal.addEventListener('click', handleOutsideClick)
+
+let mouseY;
+let initialY = 0;
+let rectTop = PlanTypes.card.getBoundingClientRect().top;
+
+const getYdistance = (event) => {
+  mouseY = (event.touches[0].pageY) - rectTop;
+};
+
+PlanTypes.card.addEventListener('touchstart', (event) => {
+    getYdistance(event);
+    initialY = mouseY;
+});
+
+PlanTypes.card.addEventListener('touchmove', (event) => {
+    getYdistance(event);
+    let diffY = mouseY - initialY;
+    isSwipeDown = diffY > 0 ? true : false;
+    if (isSwipeDown) {
+        closePlanTypes()
+    }
+});

@@ -366,7 +366,7 @@
 }
 
 .disabled {
-    color: var(--c50);
+    color: var(--p4);
     pointer-events: none;
 }
 

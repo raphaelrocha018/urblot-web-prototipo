@@ -161,6 +161,10 @@
         z-index: 200;
     }
 
+    .card-header > h2 {
+        font-size: 1.25rem;
+    }
+
     .card-footer {
         margin-top: 1rem;
     }
