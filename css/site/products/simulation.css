@@ -608,16 +608,14 @@
 
 @media (max-width: 720px) {
     .map-page {
+        height: 100dvh;
+        width: max-content;
         overflow-x: scroll;
         overflow-y: hidden;
-
     }
 
-    .map-page map {
-        position: relative;
-        width: max-content;
-        height: 100%;
-        scale: 100%;
-
+    .map-page map > img {
+        height: 100vh;
+        width: auto;
     }
 }

@@ -73,7 +73,7 @@ const MapGallery = {
     map: document.querySelector('#map-gallery > map')
 }
 
-function openMapGallery(event) {
+function openMapGallery() {
     html.classList.add('stop-scrolling-html')
     body.classList.add('stop-scrolling-body')
     if (!mobile) {
