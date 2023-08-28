@@ -64,3 +64,33 @@ PlanTypes.btnOpen.addEventListener('click', openPlanTypes)
 PlanTypes.btnClose.addEventListener('click', closePlanTypes)
 PlanTypes.modal.addEventListener('click', handleOutsideClick)
 
+
+
+const mapinha = document.querySelector('.quadra-mapa')
+
+const MapGallery = {
+    page: document.querySelector('#map-gallery'),
+    map: document.querySelector('#map-gallery > map')
+}
+
+function openMapGallery(event) {
+    html.classList.add('stop-scrolling-html')
+    body.classList.add('stop-scrolling-body')
+    if (!mobile) {
+        body.classList.add('compensate-scrollbar')
+    }
+    MapGallery.page.classList.remove('hidden')
+    MapGallery.map.classList.remove('hidden')
+}
+
+function mapOutsideClick(event) {
+    html.classList.remove('stop-scrolling-html')
+    body.classList.remove('stop-scrolling-body')
+    body.classList.remove('compensate-scrollbar')
+
+    MapGallery.page.classList.add('hidden')
+    MapGallery.map.classList.add('hidden')
+}
+
+mapinha.addEventListener('click', openMapGallery)
+MapGallery.page.addEventListener('click', mapOutsideClick)
