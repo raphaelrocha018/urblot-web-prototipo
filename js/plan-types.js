@@ -65,7 +65,7 @@ PlanTypes.btnClose.addEventListener('click', closePlanTypes)
 PlanTypes.modal.addEventListener('click', handleOutsideClick)
 
 
-
+const simlationPage = document.querySelector('.simulation-page')
 const mapinha = document.querySelector('.quadra-mapa')
 
 const MapGallery = {
@@ -75,6 +75,7 @@ const MapGallery = {
 
 function openMapGallery() {
     mapinha.style.opacity = '0'
+    simlationPage.classList.add('fixed')
     html.classList.add('stop-scrolling-html')
     body.classList.add('stop-scrolling-body')
     if (!mobile) {
@@ -92,6 +93,7 @@ function mapOutsideClick(event) {
     MapGallery.page.classList.add('hidden')
     MapGallery.map.classList.add('hidden')
     mapinha.style.opacity = '1'
+    simlationPage.classList.remove('fixed')
 }
 
 mapinha.addEventListener('click', openMapGallery)
