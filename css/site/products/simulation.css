@@ -588,6 +588,7 @@
     border-radius: 1rem;
     position: relative;
     z-index: 0;
+
 }
 
 .map-page svg {
@@ -607,6 +608,8 @@
 
 @media (max-width: 720px) {
     .map-page {
+        place-content: initial;
+
         position: fixed;
         overscroll-behavior: none;
         touch-action: none;

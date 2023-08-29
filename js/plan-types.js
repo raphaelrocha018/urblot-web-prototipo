@@ -83,6 +83,7 @@ function openMapGallery() {
     }
     MapGallery.page.classList.remove('hidden')
     MapGallery.map.classList.remove('hidden')
+    MapGallery.map.scrollIntoView({ inline: "center", behavior: "smooth" });
 }
 
 function mapOutsideClick(event) {
