@@ -607,8 +607,6 @@
 
 @media (max-width: 720px) {
     .map-page {
-        /* height: 100%;
-        width: auto; */
         position: fixed;
         overscroll-behavior: none;
         touch-action: none;
@@ -617,15 +615,14 @@
     }
 
     .map-page map {
-        height: 100svh;
+        height: 100%;
         width: max-content;
         overflow-x: auto;
         overflow-y: hidden;
-        left: 50%;
     }
 
     .map-page map > img {
-        height: 100vh;
+        height: 100%;
         width: auto;
     }
 
