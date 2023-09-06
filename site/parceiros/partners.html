@@ -1,131 +1,101 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<link rel="icon" type="image/x-icon" href="./favicon.ico" />
-		<link rel="stylesheet" href="./css/style.css" />
-		<title>Seja nosso parceiro - URBLOT</title>
-	</head>
+	<link rel="stylesheet" href="/style.css" />
+	<title>Seja nosso parceiro - URBLOT</title>
+</head>
 
-	<body>
-		<!-- CONTEÚDO -->
+<body>
+	<!-- CONTEÚDO -->
 
-		<div class="partners-grid container">
-			<!-- NOME DO EMPREENDIMENTO -->
-			<section class="quadra-titulo">
-				<hgroup>
-					<h1 class="titulo-nome">Seja Nosso Parceiro!</h1>
-					<p class="titulo-local">
-						Seu empreendimento na plataforma que vai revolucionar o mercado imobiliário.
-					</p>
-				</hgroup>
-			</section>
+	<div class="partners-grid container">
+		<!-- NOME DO EMPREENDIMENTO -->
+		<section class="quadra-titulo">
+			<hgroup>
+				<h1 class="titulo-nome">Seja Nosso Parceiro!</h1>
+				<p class="titulo-local">
+					Seu empreendimento na plataforma que vai revolucionar o mercado imobiliário.
+				</p>
+			</hgroup>
+		</section>
 
-			<!-- INFOS DA QUADRA -->
-			<!-- SIMULADOR -->
-			<form id="formPartner" role="form" method="post">
-				<section class="quadra-simulador">
-					<h3>Preencha o formulário</h3>
-					<div class="simulador-container">
-						<div class="simulador-escolha">
-							<div>
-								<label for="vencimento">Nome</label>
-								<input
-									type="text"
-									id="nomeCompleto"
-									name="nomeCompleto"
-									required
-									data-parsley-error-message="Campo obrigatório" />
-							</div>
-							<div>
-								<label for="vencimento">Nome da sua Empresa</label>
-								<input
-									type="text"
-									id="nomeEmpresa"
-									name="nomeEmpresa"
-									required
-									data-parsley-error-message="Campo obrigatório" />
-							</div>
-							<div>
-								<label for="vencimento">CNPJ</label>
-								<input
-									type="text"
-									id="cnpj"
-									data-mask="00.000.000/0000-00"
-									name="cnpj"
-									required
-									data-parsley-error-message="Campo obrigatório" />
-							</div>
-							<div>
-								<label for="vencimento">Email</label>
-								<input
-									type="text"
-									id="email"
-									name="email"
-									required
-									data-parsley-error-message="Campo obrigatório" />
-							</div>
-							<div>
-								<label for="quadra">Estado</label>
-								<select id="estado" required data-parsley-error-message="Campo obrigatório">
-									<option value=""></option>
-								</select>
-							</div>
-							<div>
-								<label for="lote">Cidade</label>
-								<select id="cidade" required="" data-parsley-error-message="Campo obrigatório"></select>
-							</div>
-							<div>
-								<label for="lote-value">Telefone</label>
-								<input
-									data-mask="(00) 00000-0000"
-									type="text"
-									id="celular"
-									inputmode="numeric"
-									required
-									data-parsley-error-message="Campo obrigatório" />
-							</div>
+		<!-- INFOS DA QUADRA -->
+		<!-- SIMULADOR -->
+		<form id="formPartner" role="form" method="post">
+			<section class="quadra-simulador">
+				<h3>Preencha o formulário</h3>
+				<div class="simulador-container">
+					<div class="simulador-escolha">
+						<div>
+							<label for="vencimento">Nome</label>
+							<input type="text" id="nomeCompleto" name="nomeCompleto" required data-parsley-error-message="Campo obrigatório" />
 						</div>
+						<div>
+							<label for="vencimento">Nome da sua Empresa</label>
+							<input type="text" id="nomeEmpresa" name="nomeEmpresa" required data-parsley-error-message="Campo obrigatório" />
+						</div>
+						<div>
+							<label for="vencimento">CNPJ</label>
+							<input type="text" id="cnpj" data-mask="00.000.000/0000-00" name="cnpj" required data-parsley-error-message="Campo obrigatório" />
+						</div>
+						<div>
+							<label for="vencimento">Email</label>
+							<input type="text" id="email" name="email" required data-parsley-error-message="Campo obrigatório" />
+						</div>
+						<div>
+							<label for="quadra">Estado</label>
+							<select id="estado" required data-parsley-error-message="Campo obrigatório">
+								<option value=""></option>
+							</select>
+						</div>
+						<div>
+							<label for="lote">Cidade</label>
+							<select id="cidade" required="" data-parsley-error-message="Campo obrigatório"></select>
+						</div>
+						<div>
+							<label for="lote-value">Telefone</label>
+							<input data-mask="(00) 00000-0000" type="text" id="celular" inputmode="numeric" required data-parsley-error-message="Campo obrigatório" />
+						</div>
+					</div>
 
-						<h4>Empreendimento</h4>
-						<div class="entrada">
-							<div class="qtEmpreendimentos">
-								<label for="numEmpreendimentos" class="form-label qntsEmpreendimentos"
-									>Quantos empreendimentos lançados?</label
-								>
-								<div class="grupodeRadios">
-									<div class="radio-group">
-										<input type="radio" id="opcao1" name="grupo" value="1" />
-										<span for="opcao1">1</span>
-									</div>
-									<div class="radio-group">
-										<input type="radio" id="opcao2" name="grupo" value="Entre 2 e 5" />
-										<span for="opcao2">Entre 2 e 5</span>
-									</div>
+					<h4>Empreendimento</h4>
+					<div class="entrada">
+						<div class="qtEmpreendimentos">
+							<label for="numEmpreendimentos" class="form-label qntsEmpreendimentos">Quantos empreendimentos lançados?</label>
+							<div class="grupodeRadios">
+								<div class="radio-group">
+									<input type="radio" id="opcao1" name="grupo" value="1" />
+									<span for="opcao1">1</span>
+								</div>
+								<div class="radio-group">
+									<input type="radio" id="opcao2" name="grupo" value="Entre 2 e 5" />
+									<span for="opcao2">Entre 2 e 5</span>
+								</div>
 
-									<div class="radio-group">
-										<input type="radio" id="opcao3" name="grupo" value="Mais de 5" />
-										<span for="opcao3">Mais de 5</span>
-									</div>
+								<div class="radio-group">
+									<input type="radio" id="opcao3" name="grupo" value="Mais de 5" />
+									<span for="opcao3">Mais de 5</span>
 								</div>
 							</div>
-							<div class="informacoesAdicionaisdiv">
-								<label class="form-label">Alguma informação adicional?</label>
-								<textarea class="form-control" id="informacoesAdicionais"></textarea>
-							</div>
+						</div>
+						<div class="informacoesAdicionaisdiv">
+							<label class="form-label">Alguma informação adicional?</label>
+							<textarea class="form-control" id="informacoesAdicionais"></textarea>
 						</div>
 					</div>
+				</div>
 
-					<div class="partners-btns">
-						<button id="enviarForm" type="submit" class="btn1">Enviar</button>
-					</div>
-				</section>
-			</form>
+				<div class="partners-btns">
+					<button id="enviarForm" type="submit" class="btn1">Enviar</button>
+				</div>
+			</section>
+		</form>
 
-			<!-- FUNDO DO CABEÇALHO -->
-			<div class="partners-header"></div>
-		</div>
-	</body>
+		<!-- FUNDO DO CABEÇALHO -->
+		<div class="partners-header"></div>
+	</div>
+</body>
 </html>

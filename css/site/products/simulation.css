@@ -51,7 +51,8 @@
 
 @media (max-width: 720px) {
     .simulation-content {
-        margin-block: 2rem 1.5rem;
+        padding-top: 6rem;
+        margin-block: 0 1.5rem;
     }
 
     .simulation-content:before {
@@ -290,7 +291,7 @@
 }
 
 .simulador-container select {
-    background: url('/assets/site/btn-icons/arrrow.svg') no-repeat right 0.75rem center;
+    background: url('https://strfiles.blob.core.windows.net/empreendimentos/icons/buttons/arrrow.svg') no-repeat right 0.75rem center;
 }
 
 .simulador-container input:focus {
@@ -301,7 +302,7 @@
 
 .simulador-container select:focus {
     outline: none;
-    background: var(--c00) url('/assets/site/btn-icons/arrrow.svg') no-repeat right 0.75rem center;
+    background: var(--c00) url('https://strfiles.blob.core.windows.net/empreendimentos/icons/buttons/arrrow.svg') no-repeat right 0.75rem center;
     border: solid 1px var(--p2);
 }
 
@@ -378,7 +379,7 @@
     display: inline-block;
     width: 1.5rem;
     height: 1.5rem;
-    background: url('/assets/site/btn-icons/schedule.svg');
+    background: url('https://strfiles.blob.core.windows.net/empreendimentos/icons/buttons/schedule.svg');
 }
 
 .simulador-btns > a {
@@ -542,6 +543,8 @@
 
 /* #endregion */
 
+/* #region --- MODAL MAPA */
+
 .map-page {
     display: grid;
     height: 100dvh;
@@ -606,6 +609,10 @@
     display: none;
 }
 
+/* #endregion */
+
+/* #region --- RESPONSIVO MODAL MAPA */
+
 @media (max-width: 720px) {
     .map-page {
         place-content: initial;
@@ -633,3 +640,5 @@
         position: fixed;
     }
 }
+
+/* #endregion */

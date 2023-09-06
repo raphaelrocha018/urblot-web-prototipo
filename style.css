@@ -9,9 +9,6 @@
 @import url('./css/global/components/buttons.css');
 
 @import url('./css/global/login/login.css');
-@import url('./css/global/login/register.css');
-@import url('./css/global/login/reset-password.css');
-
 
 /* --------- SITE -------------------- */
 @import url('./css/site/site.css');

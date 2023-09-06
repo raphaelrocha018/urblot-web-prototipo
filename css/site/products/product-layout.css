@@ -140,11 +140,11 @@
 }
 
 .detalhes-medida::before {
-	background-image: url('/assets/site/btn-icons/ruler.svg');
+	background-image: url('https://strfiles.blob.core.windows.net/empreendimentos/icons/buttons/ruler.svg');
 }
 
 .detalhes-valor::before {
-	background-image: url('/assets/site/btn-icons/money.svg');
+	background-image: url('https://strfiles.blob.core.windows.net/empreendimentos/icons/buttons/money.svg');
 }
 
 .intro-conteudo button::before {
@@ -152,7 +152,7 @@
 	display: inline-block;
 	width: 24px;
 	height: 24px;
-	background-image: url('/assets/site/btn-icons/calc.svg');
+	background-image: url('https://strfiles.blob.core.windows.net/empreendimentos/icons/buttons/calc.svg');
 	transition: 0.4s ease;
 }
 
@@ -190,10 +190,18 @@
 }
 
 @media (max-width: 720px) {
+	main:has(.emp-intro) {
+		padding-top: 4.5rem;
+	}
+
 	.emp-intro {
 		grid-template-columns: 1fr;
 		margin-bottom: 0rem;
 		gap: 0;
+	}
+
+	.intro-slide::before {
+		display: none;
 	}
 
 	.intro-conteudo {
@@ -312,7 +320,11 @@
 	}
 }
 
-@media (max-width: 720px) {}
+@media (max-width: 720px) {
+	.emp-destaques {
+		display: none;
+	}
+}
 
 /* #endregion */
 
