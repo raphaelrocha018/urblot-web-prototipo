@@ -13,7 +13,7 @@
 }
 
 .logo-vertical {
-	margin: 7rem auto 4.5rem;
+	margin: 6rem auto 5rem;
 }
 
 .footer-conteudo > span {
@@ -38,33 +38,58 @@
 	gap: 2.5rem;
 
 	justify-content: center;
-	margin-bottom: 4.5rem;
+	margin-bottom: 4rem;
+
+	.whatsapp::before {
+		content: '';
+		display: inline-block;
+		width: 1.5rem;
+		height: 1.5rem;
+		background: url('https://strfiles.blob.core.windows.net/empreendimentos/icons/buttons/whatsapp.svg');
+	}
+
+	.email::before {
+		content: '';
+		display: inline-block;
+		width: 1.5rem;
+		height: 1.5rem;
+		background: url('https://strfiles.blob.core.windows.net/empreendimentos/icons/buttons/email.svg');
+	}
 }
 
-.whatsapp::before {
-	content: '';
-	display: inline-block;
-	width: 1.5rem;
-	height: 1.5rem;
-	background: url('https://strfiles.blob.core.windows.net/empreendimentos/icons/buttons/whatsapp.svg');
-}
-
-.email::before {
-	content: '';
-	display: inline-block;
-	width: 1.5rem;
-	height: 1.5rem;
-	background: url('https://strfiles.blob.core.windows.net/empreendimentos/icons/buttons/email.svg');
-}
 
 .copyright {
 	text-align: center;
 	font-weight: 500;
-	color: var(--c00);
+	color: var(--b1);
+
+	> i > sup {
+		margin-left: 0.25rem;
+	}
 }
 
-.copyright sup {
-	margin-left: 0.25rem;
+.social {
+	display: flex;
+	gap: 1.5rem;
+	justify-content: center;
+	margin-top: 1rem;
+}
+
+.social svg {
+	transition: .3s ease;
+
+	> path {
+		transition: .3s ease;
+	}
+}
+
+.social svg:hover {
+	scale: 105%;
+
+	> path {
+		box-shadow: var(--shadow2);
+		fill: var(--c00);
+	}
 }
 
 /* #endregion */
@@ -93,9 +118,18 @@
 		gap: 1rem;
 	}
 
+	.footer-btns .whatsapp,
+	.footer-btns .email {
+		width: 80%;
+	}
+
 	.copyright > span,
 	.copyright > i {
 		display: block;
+	}
+
+	.social {
+		margin-top: 2rem;
 	}
 }
 

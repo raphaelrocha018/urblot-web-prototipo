@@ -142,6 +142,7 @@
 	.btn2 {
 		padding: 0.75rem 1.125rem;
 		font-size: 0.875rem;
+		justify-content: center;
 	}
 
 	.btn3 {
