@@ -453,7 +453,7 @@
 
 @media (max-width: 720px) {
 	.empreendimentos {
-		padding: 3rem 0rem 3rem 0;
+		padding: 5.5rem 0rem 1rem 0;
 	}
 
 	.empreendimentos h2 {
@@ -563,7 +563,7 @@
 	}
 
 	.sobre-conteudo img {
-		max-width: 80%;
+		max-width: 100%;
 	}
 }
 
@@ -704,7 +704,8 @@
 
 @media (max-width: 720px) {
 	.parceiros {
-		padding: 1rem;
+		padding: 6rem 1rem 1rem;
+		height: calc(100vh - 5rem);
 	}
 
 	.parceiros-box {
